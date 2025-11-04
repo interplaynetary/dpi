@@ -18,17 +18,20 @@ export default function HeroSection() {
         <div className="text-center space-y-8">
           <div className="inline-block">
             <div className="bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full text-sm font-medium">
-              Ready for COP30 | $200K Investment Opportunity
+             Digital Public Infrastructure for Planetary Coordination
             </div>
           </div>
           
           <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight max-w-5xl mx-auto leading-tight">
-            Technology for Better{" "}
-            <span className="text-primary">Global Coordination</span>
+            Free Association
           </h1>
           
+          <p className="text-2xl md:text-3xl font-semibold max-w-4xl mx-auto leading-tight mb-4">
+            Align <span className="text-chart-3">Capacities</span> with <span className="text-primary">Priorities</span> and <span className="text-chart-2">Needs</span>
+          </p>
+          
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Transform how humanity coordinates resources by aligning resource flows with collective values and mutual contribution. From local communities to global institutions.
+            A mathematically-proven infrastructure where capacity flows automatically to what you value most - enabling any entity, from individuals to institutions, to coordinate resources through mutual recognition.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

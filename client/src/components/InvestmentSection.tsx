@@ -1,144 +1,97 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink } from "lucide-react";
-import { TreeMap } from "./TreeMap";
+import { ArrowRight, Code, Server, Users, Globe } from "lucide-react";
 
-const tiers = [
+const initiatives = [
   {
-    name: "COP30 Deployment",
-    amount: "$200K",
-    description: "Launch at COP30 with full functionality",
-    highlighted: true
+    icon: Code,
+    name: "Development & Deployment",
+    description: "Core infrastructure development - algorithm refinement, secure federated servers, and integration tools for organizations",
+    amount: "$250K immediate",
+    color: "text-primary"
   },
   {
-    name: "Global Scale",
-    amount: "$1M",
-    description: "Scale to billions of users worldwide",
-    roi: "188x cost savings through coordination efficiency"
+    icon: Globe,
+    name: "Interactive Demonstrations",
+    description: "Living labs at global coordination bodies - UN agencies, foundations, and regional partners - showing real-time allocation",
+    amount: "Part of $250K phase",
+    color: "text-chart-2",
+  },
+  {
+    icon: Server,
+    name: "Secure Infrastructure",
+    description: "Federated server deployment enabling privacy-preserving, peer-to-peer coordination across institutional boundaries",
+    amount: "Ongoing development",
+    color: "text-chart-3"
+  },
+  {
+    icon: Users,
+    name: "Landmark Pilot Program",
+    description: "12-month validation with 15-20 entities coordinating $1B+ across climate, health, and humanitarian sectors",
+    amount: "$25M institutional focus",
+    color: "text-primary",
+    roi: "Direct comparison: >95% efficiency vs ~70% traditional"
   }
 ];
 
-const recognitionAllocation = {
-  name: "Collective Recognition",
-  children: [
-    { 
-      name: "Technical Contributors", 
-      value: 35,
-      color: "hsl(var(--primary))"
-    },
-    { 
-      name: "Coordination & Design", 
-      value: 25,
-      color: "hsl(var(--chart-2))"
-    },
-    { 
-      name: "R & D", 
-      value: 20,
-      color: "hsl(var(--chart-3))"
-    },
-    { 
-      name: "Community Building", 
-      value: 15,
-      color: "hsl(var(--chart-4))"
-    },
-    { 
-      name: "Operations", 
-      value: 7,
-      color: "hsl(var(--chart-5))"
-    },
-  ]
-};
-
 export default function InvestmentSection() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="investment" className="py-20 md:py-32 bg-muted/30">
+    <section id="investment" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl">Investment Ask</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Funding tiers designed for maximum impact
+        <div className="text-center space-y-3 mb-10">
+          <h2 className="font-display font-bold text-4xl md:text-5xl">Join the Initiative</h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Supporting development, deployment, and validation of planetary coordination infrastructure
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {tiers.map((tier, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {initiatives.map((initiative, index) => (
             <Card 
               key={index} 
-              className={`p-8 ${tier.highlighted ? 'border-primary border-2' : ''} hover-elevate transition-all`}
-              data-testid={`card-tier-${index}`}
+              className={`p-6 ${initiative?.highlighted ? 'border-primary border-2 bg-primary/5' : ''} hover-elevate transition-all`}
+              data-testid={`card-initiative-${index}`}
             >
-              {tier.highlighted && (
-                <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                  RECOMMENDED
+              <div className="flex items-start gap-4 mb-4">
+                <div className={`w-12 h-12 ${initiative?.highlighted ? 'bg-primary/10' : 'bg-muted'} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  <initiative.icon className={`w-6 h-6 ${initiative.color}`} />
+                </div>
+                {initiative?.highlighted && (
+                  <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                    PRIMARY FOCUS
+                  </div>
+                )}
+              </div>
+              <h3 className="font-display font-semibold text-xl mb-2">{initiative.name}</h3>
+              <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{initiative.description}</p>
+              {initiative.roi && (
+                <div className="bg-chart-2/10 text-chart-2 px-4 py-2 rounded-lg text-sm font-medium mb-3">
+                  {initiative.roi}
                 </div>
               )}
-              <h3 className="font-display font-semibold text-2xl mb-2">{tier.name}</h3>
-              <div className="text-5xl font-bold text-primary mb-4">{tier.amount}</div>
-              <p className="text-muted-foreground mb-6">{tier.description}</p>
-              {tier.roi && (
-                <div className="bg-chart-2/10 text-chart-2 px-4 py-2 rounded-lg text-sm font-medium mb-6">
-                  ROI: {tier.roi}
-                </div>
-              )}
-              <Button className="w-full gap-2" variant={tier.highlighted ? "default" : "outline"} data-testid={`button-invest-${index}`}>
-                Learn More <ArrowRight className="w-4 h-4" />
-              </Button>
+              <div className="text-lg font-semibold text-primary">
+                {initiative.amount}
+              </div>
             </Card>
           ))}
         </div>
-        
-        <Card className="p-8">
-          <h3 className="font-display font-semibold text-4xl md:text-5xl mb-6 text-center leading-tight break-words">
-            Collective Recognition<br className="block" />
-            for Fund Distribution
-          </h3>
-          <p className="text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
-            We use <strong>collective recognition</strong> instead of traditional budgets. 
-            Members recognize each other's contributions towards collective self-actualization, 
-            and funds are allocated <strong>proportionally</strong> based on mutual recognition shares—not 
-            predetermined categories.
-          </p>
-          
-          <div className="mb-8">
-            <TreeMap data={recognitionAllocation} width={600} height={400} />
-          </div>
-          
-          <div className="bg-muted/50 rounded-lg p-6 space-y-4">
-            <h4 className="font-semibold text-lg">How Collective Recognition Works:</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span><strong>No centralized budget:</strong> Members recognize contributions that enable their own growth and self-actualization</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span><strong>Mutual recognition:</strong> When members mutually recognize each other, they establish recognition percentages</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span><strong>Proportional allocation:</strong> Providers allocate resources based on recognition shares—everyone gets their fair share, not winner-takes-all</span>
-              </li>
-            </ul>
-            
-            <div className="pt-4 flex items-center justify-center">
-              <Button variant="outline" size="sm" asChild>
-                <a 
-                  href="https://playnet.gitbook.io/docs/collective-recognition" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="gap-2"
-                >
-                  Learn More About Collective Recognition
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
-          
-          <p className="text-xs text-muted-foreground text-center mt-6">
-            The percentages shown is an example of collective-recognition, which emerge organically from genuine mutual enabling relationships.
-          </p>
-        </Card>
+
+        <div className="text-center">
+          <Button 
+            size="lg"
+            className="gap-2" 
+            onClick={() => scrollToSection('contact')}
+          >
+            Get Involved <ArrowRight className="w-4 h-4" />
+          </Button>
+        </div>
       </div>
     </section>
   );

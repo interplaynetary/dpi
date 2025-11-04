@@ -38,7 +38,7 @@ Index
 
 #### **1.1 The Imperative: A Global Crisis of Coordination** {#1.1-the-imperative:-a-global-crisis-of-coordination}
 
-From climate adaptation to pandemic response, from humanitarian aid to sustainable development, our institutional frameworks for cooperation are failing to meet the pace and scale of global challenges. Pledges for critical funding are stalled by bureaucracy, emergency resources are paralyzed by political negotiation, and aid flows are inequitable. This systemic gridlock fuels a legitimate global fear of collapse, as the mechanisms we rely on—markets that exclude the vulnerable, charity that is unsustainable, and top-down authority that is too slow and inflexible—prove inadequate for a crisis-prone world.
+From climate adaptation to pandemic response, from humanitarian aid to sustainable development, our institutional frameworks for cooperation are failing to meet the pace and scale of global challenges. Pledges for critical funding are stalled by bureaucracy, emergency resources are paralyzed by political negotiation, and aid flows are inequitable. This systemic gridlock fuels a legitimate global fear of collapse, as the mechanisms we rely on - markets that exclude the vulnerable, charity that is unsustainable, and top-down authority that is too slow and inflexible - prove inadequate for a crisis-prone world.
 
 The challenge is not a lack of resources or goodwill, but a lack of effective coordination infrastructure. We are attempting to solve 21st-century polycrises with 20th-century tools. This moment presents a unique opportunity to prototype new systems of reciprocity and regeneration. We are not here to propose another framework; we are here to deploy a fully-implemented, mathematically-proven Digital Public Infrastructure (DPI) designed for this exact purpose.
 
@@ -53,7 +53,7 @@ Free Association introduces a fourth type of economic relationship, moving beyon
 | **Bureaucracy** | "An authority decides who gets what." | Slow, political, and inflexible. |
 | **Free Association** | **"I recognize your contribution towards my goals; you recognize mine."** | **Enables voluntary, fair, self-organizing coordination.** |
 
-This new relationship, **Mutual Recognition**, forms the foundation of our DPI. It is a peer-to-peer system that allows any entity—from nation-states and UN agencies to philanthropic foundations, impact funds, grassroots organizations, and frontline communities—to express its priorities and then allocate its resources based on who it recognizes as contributing to those priorities. It translates the social practice of gratitude and self-awareness into a powerful, transparent, and efficient engine for global coordination.
+This new relationship, **Mutual Recognition**, forms the foundation of our DPI. It is a peer-to-peer system that allows any entity - from nation-states and UN agencies to philanthropic foundations, impact funds, grassroots organizations, and frontline communities - to express its priorities and then allocate its resources based on who it recognizes as contributing to those priorities. It translates the social practice of gratitude and self-awareness into a powerful, transparent, and efficient engine for global coordination.
 
 #### **1.3 How It Works: From Mathematical Principle to Crisis Response** {#1.3-how-it-works:-from-mathematical-principle-to-crisis-response}
 

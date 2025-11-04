@@ -3,12 +3,12 @@ import { ExternalLink } from "lucide-react";
 
 export default function DemoSection() {
   return (
-    <section id="demo" className="py-20 md:py-32">
+    <section id="demo" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl">Try It Now</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Experience Free-Association in action with our live demo
+        <div className="text-center space-y-3 mb-10">
+          <h2 className="font-display font-bold text-4xl md:text-5xl">See It In Action</h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Experience the working prototype - interact with the mutual recognition system and see real-time resource optimization
           </p>
         </div>
         
@@ -20,19 +20,19 @@ export default function DemoSection() {
               <div className="w-3 h-3 rounded-full bg-chart-2" />
             </div>
             <a 
-              href="https://interplaynetary.github.io/free-association/" 
+              href="https://free.playnet.lol/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-demo-external"
             >
-              <span>interplaynetary.github.io/free-association</span>
+              <span>free.playnet.lol</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
           <div className="aspect-video bg-background">
             <iframe
-              src="https://interplaynetary.github.io/free-association/"
+              src="https://free.playnet.lol/"
               className="w-full h-full"
               title="Free-Association Demo"
               data-testid="iframe-demo"

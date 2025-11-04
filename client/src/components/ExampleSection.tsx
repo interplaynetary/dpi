@@ -1,95 +1,97 @@
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Flag } from "lucide-react";
+import { AlertTriangle, Clock, Zap, CheckCircle2 } from "lucide-react";
+
+const traditionalApproach = [
+  { label: "Step 1", event: "Organization identifies need for resources", icon: AlertTriangle, color: "text-destructive" },
+  { label: "Step 2", event: "Submit applications and proposals to multiple funders", icon: Clock, color: "text-orange-500" },
+  { label: "Step 3", event: "Wait for review cycles, committees, and negotiations", icon: Clock, color: "text-orange-500" },
+  { label: "Step 4", event: "Resources arrive piecemeal, often misaligned with priorities", icon: Clock, color: "text-destructive" },
+  { label: "Result", event: "Slow, unpredictable, disconnected from what funders actually value", icon: Clock, color: "text-destructive" }
+];
+
+const freeAssociationApproach = [
+  { label: "Step 1", event: "Organizations express what they value & need", icon: CheckCircle2, color: "text-primary" },
+  { label: "Step 2", event: "Funders publish capacity & recognition weights", icon: CheckCircle2, color: "text-chart-2" },
+  { label: "Step 3", event: "Algorithm converges to optimal allocation in real-time", icon: Zap, color: "text-chart-2" },
+  { label: "Step 4", event: "Resources flow automatically to mutually-recognized partners", icon: CheckCircle2, color: "text-chart-2" },
+  { label: "Result", event: "Fast, transparent, aligned with priorities & needs", icon: Zap, color: "text-chart-2" }
+];
 
 export default function ExampleSection() {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-16 md:py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl">Real-World Example</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Country-to-Country Coordination in Action
+        <div className="text-center space-y-3 mb-10">
+          <h2 className="font-display font-bold text-4xl md:text-5xl">Coordination in Action</h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Resources flow automatically to satisfy needs based on mutual recognition - from daily operations to crisis response
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="flex items-start gap-4" data-testid="step-recognition">
-              <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-primary font-bold">1</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Traditional System */}
+          <Card className="p-6 bg-gradient-to-br from-destructive/5 to-destructive/10 border-destructive/20">
+            <div className="space-y-4">
+              <div className="text-center pb-4 border-b border-destructive/20">
+                <h3 className="font-display font-bold text-2xl mb-2">Traditional Approach</h3>
+                <p className="text-sm text-muted-foreground">Disconnected priorities & needs</p>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Mutual Recognition Formed</h3>
-                <p className="text-muted-foreground">Tanzania recognizes Brazil's agricultural contributions → Brazil recognizes Tanzania's environmental work</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4" data-testid="step-need">
-              <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-primary font-bold">2</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Need Identified</h3>
-                <p className="text-muted-foreground">Tanzania needs agricultural expertise to improve food security</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4" data-testid="step-resource">
-              <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-primary font-bold">3</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Resource Available</h3>
-                <p className="text-muted-foreground">Brazil has 5,000 hours of agricultural expertise available</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4" data-testid="step-allocation">
-              <div className="w-8 h-8 bg-chart-2/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-chart-2 font-bold">✓</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Automatic Priority Allocation</h3>
-                <p className="text-muted-foreground">Resources flow based on mutual recognition strength</p>
-              </div>
-            </div>
-          </div>
-          
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-chart-3/5 border-primary/20">
-            <div className="space-y-8">
-              <div className="flex items-center justify-between" data-testid="flow-tanzania">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center">
-                    <Flag className="w-6 h-6 text-chart-2" />
+              
+              {traditionalApproach.map((item, index) => (
+                <div key={index} className="flex items-start gap-4" data-testid={`traditional-step-${index}`}>
+                  <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center flex-shrink-0">
+                    <item.icon className={`w-5 h-5 ${item.color}`} />
                   </div>
-                  <div>
-                    <div className="font-semibold">Tanzania</div>
-                    <div className="text-sm text-muted-foreground">Environmental Work</div>
+                  <div className="flex-1 pt-1">
+                    <div className="font-semibold text-sm mb-1">{item.day}</div>
+                    <p className="text-sm text-muted-foreground">{item.event}</p>
                   </div>
                 </div>
-                <ArrowRight className="w-6 h-6 text-primary" />
-              </div>
-              
-              <div className="h-px bg-border" />
-              
-              <div className="flex items-center justify-between" data-testid="flow-brazil">
-                <ArrowRight className="w-6 h-6 text-primary transform rotate-180" />
-                <div className="flex items-center gap-3">
-                  <div>
-                    <div className="font-semibold text-right">Brazil</div>
-                    <div className="text-sm text-muted-foreground text-right">Agricultural Expertise</div>
-                  </div>
-                  <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center">
-                    <Flag className="w-6 h-6 text-chart-4" />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-background/50 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-1">5,000</div>
-                <div className="text-sm text-muted-foreground">Hours Allocated</div>
+              ))}
+
+              <div className="pt-4 border-t border-destructive/20 text-center">
+                <div className="text-2xl font-bold text-destructive mb-1">Slow & Misaligned</div>
+                <div className="text-sm text-muted-foreground">Resources don't match priorities</div>
               </div>
             </div>
+          </Card>
+
+          {/* Free Association System */}
+          <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
+            <div className="space-y-4">
+              <div className="text-center pb-4 border-b border-primary/20">
+                <h3 className="font-display font-bold text-2xl mb-2">Free Association</h3>
+                <p className="text-sm text-muted-foreground">Priority-aligned allocation</p>
+              </div>
+              
+              {freeAssociationApproach.map((item, index) => (
+                <div key={index} className="flex items-start gap-4" data-testid={`freeassoc-step-${index}`}>
+                  <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center flex-shrink-0">
+                    <item.icon className={`w-5 h-5 ${item.color}`} />
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <div className="font-semibold text-sm mb-1">{item.day}</div>
+                    <p className="text-sm text-muted-foreground">{item.event}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="pt-4 border-t border-primary/20 text-center">
+                <div className="text-2xl font-bold text-chart-2 mb-1">Fast & Aligned</div>
+                <div className="text-sm text-muted-foreground">Resources match what you value</div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        <div className="mt-10 text-center max-w-4xl mx-auto">
+          <Card className="p-4 bg-gradient-to-r from-primary/10 to-chart-2/10 border-primary/20">
+            <p className="font-semibold mb-2">
+              <span className="text-primary">Capacity flows to priorities</span> • <span className="text-chart-2">Needs get satisfied</span> • <span className="text-primary">Values drive allocation</span>
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Whether coordinating daily operations, climate action, research funding, or emergency response
+            </p>
           </Card>
         </div>
       </div>
