@@ -1,0 +1,29 @@
+# Bun configuration file
+# https://bun.sh/docs/runtime/bunfig
+
+[install]
+# Configure package installation
+auto = "auto"
+optional = true
+dev = true
+peer = true
+production = false
+
+[install.cache]
+# Enable caching for faster installs
+dir = "~/.bun/install/cache"
+
+[run]
+# Configure bun run behavior
+bun = true
+shell = "system"
+
+[test]
+# Test runner configuration
+preload = ["./test/setup.ts"]
+
+# Module resolution
+[module]
+# Use bun's fast module resolution
+preload = []
+

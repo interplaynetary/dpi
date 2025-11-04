@@ -1,4 +1,5 @@
 import { Globe, Heart, Users, Leaf } from "lucide-react";
+import { NetworkBackground } from "./NetworkBackground";
 
 const impacts = [
   {
@@ -25,8 +26,9 @@ const impacts = [
 
 export default function VisionSection() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-primary/10 via-background to-chart-3/10">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-background to-chart-3/5 relative overflow-hidden">
+      <NetworkBackground />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center space-y-8 mb-16">
           <h2 className="font-display font-bold text-4xl md:text-6xl">The Vision</h2>
           <p className="text-2xl md:text-3xl font-semibold max-w-4xl mx-auto leading-tight">

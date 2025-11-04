@@ -1,16 +1,66 @@
 import { Card } from "@/components/ui/card";
-import { Check, Clock } from "lucide-react";
 
-const milestones = [
+const phases = [
   {
-    status: "complete",
-    items: ["P2P functionality", "Capacity mapping", "Priority distribution"]
+    phase: "PHASE 1",
+    title: "Launching",
+    items: [
+      { text: "Launching Time", status: "complete" },
+      { text: "Social Launch", status: "complete" },
+      { text: "Giveways & Promos", status: "complete" },
+      { text: "Publish Whitepaper", status: "pending" },
+      { text: "Website Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+    ]
   },
   {
-    status: "progress",
-    items: ["Security hardening", "AI integration", "Custom interfaces"]
+    phase: "PHASE 2",
+    title: "Investment",
+    items: [
+      { text: "Launching Time", status: "pending" },
+      { text: "Social Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+      { text: "Publish Whitepaper", status: "pending" },
+      { text: "Website Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+    ]
+  },
+  {
+    phase: "PHASE 3",
+    title: "Connection",
+    items: [
+      { text: "Launching Time", status: "pending" },
+      { text: "Social Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+      { text: "Publish Whitepaper", status: "pending" },
+      { text: "Website Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+    ]
+  },
+  {
+    phase: "PHASE 4",
+    title: "Growth",
+    items: [
+      { text: "Launching Time", status: "pending" },
+      { text: "Social Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+      { text: "Publish Whitepaper", status: "pending" },
+      { text: "Website Launch", status: "pending" },
+      { text: "Giveways & Promos", status: "pending" },
+    ]
   }
 ];
+
+const getStatusEmoji = (status: string) => {
+  switch (status) {
+    case "complete":
+      return "☑️";
+    case "progress":
+      return "⏳";
+    default:
+      return "⭕";
+  }
+};
 
 export default function TimelineSection() {
   return (
@@ -23,49 +73,45 @@ export default function TimelineSection() {
           </p>
         </div>
         
-        <div className="max-w-3xl mx-auto">
-          <Card className="p-8">
-            <div className="space-y-8">
-              <div data-testid="milestone-complete">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-chart-2 rounded-full flex items-center justify-center">
-                    <Check className="w-5 h-5 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {phases.map((phase, phaseIndex) => (
+            <Card 
+              key={phaseIndex} 
+              className="p-6 bg-muted/30"
+              data-testid={`phase-${phaseIndex}`}
+            >
+              <div className="space-y-4">
+                <div>
+                  <div className="text-xs font-medium text-muted-foreground mb-1">
+                    {phase.phase}
                   </div>
-                  <h3 className="font-semibold text-xl">Complete</h3>
+                  <h3 className="font-display font-bold text-xl">{phase.title}</h3>
                 </div>
-                <div className="ml-11 space-y-2">
-                  {milestones[0].items.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-chart-2 rounded-full" />
-                      <span className="text-muted-foreground">{item}</span>
+                
+                <div className="space-y-3">
+                  {phase.items.map((item, itemIndex) => (
+                    <div 
+                      key={itemIndex} 
+                      className="flex items-start gap-2"
+                      data-testid={`phase-${phaseIndex}-item-${itemIndex}`}
+                    >
+                      <span className="text-lg leading-none mt-0.5">
+                        {getStatusEmoji(item.status)}
+                      </span>
+                      <span className="text-sm flex-1">{item.text}</span>
                     </div>
                   ))}
                 </div>
               </div>
-              
-              <div className="h-px bg-border" />
-              
-              <div data-testid="milestone-progress">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-chart-4/20 rounded-full flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-chart-4" />
-                  </div>
-                  <h3 className="font-semibold text-xl">In Progress</h3>
-                </div>
-                <div className="ml-11 space-y-2">
-                  {milestones[1].items.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-chart-4 rounded-full" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="bg-primary/5 rounded-lg p-4 text-center">
-                <p className="font-semibold">Timeline: Fully operational for COP30 (6 months)</p>
-              </div>
-            </div>
+            </Card>
+          ))}
+        </div>
+        
+        <div className="max-w-3xl mx-auto mt-12">
+          <Card className="p-6 text-center bg-primary/5 border-primary/20">
+            <p className="font-semibold text-lg">
+              Timeline: Fully operational for COP30 (6 months)
+            </p>
           </Card>
         </div>
       </div>

@@ -5,7 +5,7 @@ const features = [
   {
     icon: Zap,
     title: "83% Cost Reduction",
-    description: "Peer-to-peer architecture eliminates centralized server costs"
+    description: "Peer-to-peer architecture eliminates almost all centralized server costs"
   },
   {
     icon: Globe,
@@ -25,9 +25,9 @@ const features = [
 ];
 
 const costData = [
-  { users: "100K", cost: "$119-358/month" },
-  { users: "3M", cost: "$3,570-10,710/month" },
-  { users: "8B", cost: "$9.5M-28.5M/month" }
+  { users: "100K", cost: "$200/month" },
+  { users: "3M", cost: "$5000/month" },
+  { users: "8B", cost: "$10M/month" }
 ];
 
 export default function TechnicalSection() {
@@ -56,7 +56,7 @@ export default function TechnicalSection() {
         </div>
         
         <div className="bg-card border border-card-border rounded-lg p-8">
-          <h3 className="font-display font-semibold text-2xl mb-8 text-center">Operating Costs at Scale</h3>
+          <h3 className="font-display font-semibold text-2xl mb-8 text-center">Average Operating Costs at Scale</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {costData.map((item, index) => (
               <div key={index} className="text-center" data-testid={`cost-${index}`}>

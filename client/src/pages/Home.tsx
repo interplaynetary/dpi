@@ -12,24 +12,28 @@ import DemoSection from "@/components/DemoSection";
 import VisionSection from "@/components/VisionSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { NetworkBackground } from "@/components/NetworkBackground";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <HeroSection />
-      <ProblemSection />
-      <HowItWorksSection />
-      <ExampleSection />
-      <TechnicalSection />
-      <MarketSection />
-      <TractionSection />
-      <TimelineSection />
-      <InvestmentSection />
-      <DemoSection />
-      <VisionSection />
-      <ContactSection />
-      <Footer />
+    <div className="min-h-screen relative">
+      <NetworkBackground />
+      <div className="relative z-10">
+        <Navigation />
+        <HeroSection />
+        <ProblemSection />
+        <HowItWorksSection />
+        <ExampleSection />
+        <TechnicalSection />
+        <MarketSection />
+        <TractionSection />
+        <TimelineSection />
+        <InvestmentSection />
+        <DemoSection />
+        <VisionSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { TreeMap } from "./TreeMap";
 
 const tiers = [
   {
@@ -17,12 +18,36 @@ const tiers = [
   }
 ];
 
-const useOfFunds = [
-  { category: "Security Infrastructure", percentage: 40 },
-  { category: "AI Integration", percentage: 30 },
-  { category: "Custom Interfaces", percentage: 20 },
-  { category: "Operations", percentage: 10 }
-];
+const recognitionAllocation = {
+  name: "Collective Recognition",
+  children: [
+    { 
+      name: "Technical Contributors", 
+      value: 35,
+      color: "hsl(var(--primary))"
+    },
+    { 
+      name: "Coordination & Design", 
+      value: 25,
+      color: "hsl(var(--chart-2))"
+    },
+    { 
+      name: "R & D", 
+      value: 20,
+      color: "hsl(var(--chart-3))"
+    },
+    { 
+      name: "Community Building", 
+      value: 15,
+      color: "hsl(var(--chart-4))"
+    },
+    { 
+      name: "Operations", 
+      value: 7,
+      color: "hsl(var(--chart-5))"
+    },
+  ]
+};
 
 export default function InvestmentSection() {
   return (
@@ -63,23 +88,56 @@ export default function InvestmentSection() {
         </div>
         
         <Card className="p-8">
-          <h3 className="font-display font-semibold text-2xl mb-8 text-center">Use of Funds</h3>
-          <div className="space-y-4">
-            {useOfFunds.map((fund, index) => (
-              <div key={index} className="space-y-2" data-testid={`fund-${index}`}>
-                <div className="flex items-center justify-between">
-                  <span className="font-medium">{fund.category}</span>
-                  <span className="text-muted-foreground">{fund.percentage}%</span>
-                </div>
-                <div className="h-2 bg-muted rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-primary transition-all duration-500"
-                    style={{ width: `${fund.percentage}%` }}
-                  />
-                </div>
-              </div>
-            ))}
+          <h3 className="font-display font-semibold text-4xl md:text-5xl mb-6 text-center leading-tight break-words">
+            Collective Recognition<br className="block" />
+            for Fund Distribution
+          </h3>
+          <p className="text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
+            We use <strong>collective recognition</strong> instead of traditional budgets. 
+            Members recognize each other's contributions towards collective self-actualization, 
+            and funds are allocated <strong>proportionally</strong> based on mutual recognition shares—not 
+            predetermined categories.
+          </p>
+          
+          <div className="mb-8">
+            <TreeMap data={recognitionAllocation} width={600} height={400} />
           </div>
+          
+          <div className="bg-muted/50 rounded-lg p-6 space-y-4">
+            <h4 className="font-semibold text-lg">How Collective Recognition Works:</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><strong>No centralized budget:</strong> Members recognize contributions that enable their own growth and self-actualization</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><strong>Mutual recognition:</strong> When members mutually recognize each other, they establish recognition percentages</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span><strong>Proportional allocation:</strong> Providers allocate resources based on recognition shares—everyone gets their fair share, not winner-takes-all</span>
+              </li>
+            </ul>
+            
+            <div className="pt-4 flex items-center justify-center">
+              <Button variant="outline" size="sm" asChild>
+                <a 
+                  href="https://playnet.gitbook.io/docs/collective-recognition" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="gap-2"
+                >
+                  Learn More About Collective Recognition
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </Button>
+            </div>
+          </div>
+          
+          <p className="text-xs text-muted-foreground text-center mt-6">
+            The percentages shown is an example of collective-recognition, which emerge organically from genuine mutual enabling relationships.
+          </p>
         </Card>
       </div>
     </section>
