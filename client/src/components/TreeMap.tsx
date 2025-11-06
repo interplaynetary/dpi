@@ -72,7 +72,7 @@ export const TreeMap = ({ data, width = 600, height = 400 }: TreeMapProps) => {
       .style('opacity', 0)
       .transition()
       .duration(800)
-      .style('opacity', 0.9);
+      .style('opacity', 1);
 
     // Add hover effect
     cell

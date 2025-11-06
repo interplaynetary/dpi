@@ -1,36 +1,32 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Server, Users, Globe } from "lucide-react";
+import { ArrowRight, Code, Server, Users, Globe, ExternalLink } from "lucide-react";
+import { TreeMap } from "@/components/TreeMap";
 
 const initiatives = [
   {
     icon: Code,
-    name: "Development & Deployment",
-    description: "Core infrastructure development - algorithm refinement, secure federated servers, and integration tools for organizations",
-    amount: "$250K immediate",
+    name: "Core Development",
+    description: "Algorithm refinement, security hardening, and integration tools - built in the open with contributor recognition",
     color: "text-primary"
   },
   {
     icon: Globe,
-    name: "Interactive Demonstrations",
-    description: "Living labs at global coordination bodies - UN agencies, foundations, and regional partners - showing real-time allocation",
-    amount: "Part of $250K phase",
+    name: "Living Labs",
+    description: "Interactive demonstrations showing real-time coordination - open for any organization to participate",
     color: "text-chart-2",
   },
   {
     icon: Server,
-    name: "Secure Infrastructure",
-    description: "Federated server deployment enabling privacy-preserving, peer-to-peer coordination across institutional boundaries",
-    amount: "Ongoing development",
+    name: "P2P Infrastructure",
+    description: "Federated, privacy-preserving architecture enabling coordination without central control",
     color: "text-chart-3"
   },
   {
     icon: Users,
-    name: "Landmark Pilot Program",
-    description: "12-month validation with 15-20 entities coordinating $1B+ across climate, health, and humanitarian sectors",
-    amount: "$25M institutional focus",
-    color: "text-primary",
-    roi: "Direct comparison: >95% efficiency vs ~70% traditional"
+    name: "Pilot Programs",
+    description: "Real-world validation with organizations ready to experiment with values-driven resource coordination",
+    color: "text-primary"
   }
 ];
 
@@ -46,9 +42,9 @@ export default function InvestmentSection() {
     <section id="investment" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
-          <h2 className="font-display font-bold text-4xl md:text-5xl">Join the Initiative</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl">Current Focus Areas</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Supporting development, deployment, and validation of planetary coordination infrastructure
+            Building planetary coordination infrastructure through open collaboration
           </p>
         </div>
         
@@ -56,34 +52,87 @@ export default function InvestmentSection() {
           {initiatives.map((initiative, index) => (
             <Card 
               key={index} 
-              className={`p-6 ${initiative?.highlighted ? 'border-primary border-2 bg-primary/5' : ''} hover-elevate transition-all`}
+              className="p-6 hover-elevate transition-all"
               data-testid={`card-initiative-${index}`}
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className={`w-12 h-12 ${initiative?.highlighted ? 'bg-primary/10' : 'bg-muted'} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0">
                   <initiative.icon className={`w-6 h-6 ${initiative.color}`} />
                 </div>
-                {initiative?.highlighted && (
-                  <div className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                    PRIMARY FOCUS
-                  </div>
-                )}
               </div>
               <h3 className="font-display font-semibold text-xl mb-2">{initiative.name}</h3>
               <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{initiative.description}</p>
-              {initiative.roi && (
-                <div className="bg-chart-2/10 text-chart-2 px-4 py-2 rounded-lg text-sm font-medium mb-3">
-                  {initiative.roi}
-                </div>
-              )}
-              <div className="text-lg font-semibold text-primary">
-                {initiative.amount}
-              </div>
             </Card>
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="max-w-5xl mx-auto mt-12 space-y-6">
+          <Card className="p-8 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
+            <div className="space-y-6">
+              <div className="text-center space-y-3">
+                <h3 className="text-2xl font-bold">Collective Resource Distribution</h3>
+                <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+                  This distribution represents our initial planning. However, <span className="font-semibold text-foreground">final allocations will be determined by the Collective Recognition module</span> we're building - where contributors receive resources proportionally to mutual recognition.
+                </p>
+              </div>
+              
+              <div className="max-w-2xl mx-auto">
+                <TreeMap 
+                  data={{
+                    name: "Development Resources",
+                    children: [
+                      {
+                        name: "Operations & Coordination",
+                        value: 40,
+                        description: "Participant support & monitoring",
+                        color: "hsl(200, 85%, 55%)"
+                      },
+                      {
+                        name: "Technology & Infrastructure",
+                        value: 32,
+                        description: "Secure P2P software & servers",
+                        color: "hsl(150, 70%, 50%)"
+                      },
+                      {
+                        name: "Research & Validation",
+                        value: 20,
+                        description: "Academic validation & measurement",
+                        color: "hsl(280, 60%, 60%)"
+                      },
+                      {
+                        name: "Contingency",
+                        value: 8,
+                        description: "Adaptive capacity",
+                        color: "hsl(25, 85%, 60%)"
+                      }
+                    ]
+                  }}
+                  width={700}
+                  height={400}
+                />
+              </div>
+
+              <div className="text-center pt-4">
+                <a 
+                  href="https://playnet.gitbook.io/docs/collective-recognition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  Learn about Collective Recognition <ExternalLink className="w-4 h-4" />
+                </a>
+                <p className="text-xs text-muted-foreground mt-2 max-w-2xl mx-auto">
+                  Once implemented, resource allocation will be proportional to mutual recognition shares - determined by contributors themselves, not by central planning.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        <div className="text-center mt-10">
+          <p className="text-lg text-muted-foreground mb-4 max-w-2xl mx-auto">
+            Contributors receive recognition through the same mutual recognition system we're building. Support flows to those who create value.
+          </p>
           <Button 
             size="lg"
             className="gap-2" 

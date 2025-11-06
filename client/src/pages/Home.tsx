@@ -5,10 +5,7 @@ import EconomicRelationshipSection from "@/components/EconomicRelationshipSectio
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ExampleSection from "@/components/ExampleSection";
 import AudienceSection from "@/components/AudienceSection";
-import MetricsSection from "@/components/MetricsSection";
 import TechnicalSection from "@/components/TechnicalSection";
-import MomentumSection from "@/components/MomentumSection";
-import TimelineSection from "@/components/TimelineSection";
 import InvestmentSection from "@/components/InvestmentSection";
 import DemoSection from "@/components/DemoSection";
 import VisionSection from "@/components/VisionSection";
@@ -18,9 +15,9 @@ import { NetworkBackground } from "@/components/NetworkBackground";
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-x-hidden">
       <NetworkBackground />
-      <div className="relative z-10">
+      <div className="relative z-10 overflow-x-hidden">
         <Navigation />
         <HeroSection />
         <ProblemSection />
@@ -28,12 +25,9 @@ export default function Home() {
         <HowItWorksSection />
         <ExampleSection />
         <AudienceSection />
-        <MetricsSection />
         <TechnicalSection />
-        <MomentumSection />
         <DemoSection />
         <VisionSection />
-        <TimelineSection />
         <InvestmentSection />
         <ContactSection />
         <Footer />

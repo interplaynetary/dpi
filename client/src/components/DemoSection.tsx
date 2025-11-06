@@ -6,10 +6,9 @@ export default function DemoSection() {
     <section id="demo" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
-          <h2 className="font-display font-bold text-4xl md:text-5xl">See It In Action</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl">Try it out!</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Experience the working prototype - interact with the mutual recognition system and see real-time resource optimization
-          </p>
+            Drag a square up/down to increase/decrease its priority! To see more advanced features like mutual-recognition and capacity allocation create a free account!</p>
         </div>
         
         <Card className="overflow-hidden">
@@ -30,7 +29,7 @@ export default function DemoSection() {
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
-          <div className="aspect-video bg-background">
+          <div className="bg-background" style={{ minHeight: '600px', height: '70vh' }}>
             <iframe
               src="https://free.playnet.lol/"
               className="w-full h-full"

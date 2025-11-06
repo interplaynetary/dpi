@@ -86,41 +86,43 @@ To introduce this paradigm shift, we are partnering with diverse organizations a
 **Objectives of the Global Living Labs:**
 
 * **Demonstrate:** Allow participants to engage directly with the platform, participating in real-time simulations of resource mapping and allocation across diverse contexts.  
-* **Engage:** Convene key stakeholders who can turn this prototype into widespread practice, including government representatives, UN agencies, foundation leaders, impact investors, grassroots organizations, and community leaders.  
-* **Legitimize:** Build credibility through multiple high-profile partnerships and demonstrations, creating the momentum necessary for larger-scale adoption.  
+* **Engage:** Convene stakeholders interested in values-driven coordination, including government representatives, UN agencies, foundation leaders, impact investors, grassroots organizations, and community leaders.  
+* **Validate:** Test the system across multiple contexts and use cases, gathering empirical evidence of effectiveness.  
 * **Iterate:** Gather feedback from diverse contexts to refine the platform for different use cases and organizational cultures.
 
-#### **2.2 The Initiative Part II: A Landmark Pilot Program** {#2.2-the-initiative-part-ii:-a-landmark-pilot-program}
+#### **2.2 The Initiative Part II: Real-World Pilots** {#2.2-the-initiative-part-ii:-real-world-pilots}
 
-Building on the momentum from the living labs, we propose a landmark pilot to empirically validate the system's effectiveness against traditional mechanisms.
+Building on the momentum from the living labs, we're seeking partners to pilot values-driven coordination in real contexts.
 
-* **Scope:** A diverse coalition of 15-20 entities (including nations, UN agencies, philanthropic foundations, and impact funds) coordinating up to **$1 billion** in resources across climate adaptation, health, humanitarian aid, and sustainable development.  
-* **Duration:** 12 months.  
-* **Control:** Run in parallel with traditional allocation processes for direct comparison.
+* **Approach:** Collaborative experimentation with entities ready to coordinate resources through mutual recognition - from local community projects to multi-stakeholder initiatives.  
+* **Comparison:** Pilots can run alongside traditional mechanisms to empirically compare outcomes.  
+* **Open Participation:** Any organization can participate - the system is designed for voluntary coordination without requiring central authority.
 
-**Key Success Metrics:**
+**Observable Metrics:**
 
-* **Speed:** Real-time convergence to optimal allocation within seconds of any need update (vs. 90+ day negotiation cycles).    
-* **Efficiency:** \> 95% of resources allocated with minimal overhead (vs. \~70%).  
-* **Fairness:** Gini coefficient \< 0.3, ensuring allocation is proportional to need and mutual recognition.  
-* **Adaptability:** Immediate system re-convergence when new crises emerge or needs change.
+* **Speed:** Real-time convergence to optimal allocation within seconds of any need update (vs. typical multi-week negotiation cycles).    
+* **Efficiency:** Direct peer-to-peer resource flows with minimal intermediary overhead.  
+* **Fairness:** Allocation proportional to need and mutual recognition, measured via distribution metrics.  
+* **Adaptability:** Immediate system re-convergence when new needs emerge or circumstances change.
 
-#### **2.3 The Ask: Budget & Deliverables** {#2.3-the-ask:-budget-&-deliverables}
+#### **2.3 How Support Flows** {#2.3-how-support-flows}
 
-We are seeking **$25 million** to fund the 12-month pilot program.
+This project practices the mutual recognition it preaches. Contributors receive recognition through the same system we're building.
 
-* **Technology & Infrastructure ($8M):** Secure P2P software, servers, and integration.  
-* **Operations & Coordination ($10M):** Participant onboarding, training, and monitoring.  
-* **Research & Validation ($5M):** Independent academic validation and outcome measurement.  
-* **Contingency ($2M).**
+**Development Priorities:**
 
-**Deliverables:**
+* **Core Infrastructure:** Secure P2P architecture, cryptographic guarantees, real-time convergence algorithms.  
+* **Integration Tools:** APIs and interfaces for diverse organizational contexts.  
+* **Documentation & Standards:** Open technical specifications enabling interoperability and widespread adoption.  
+* **Empirical Validation:** Academic research partnerships measuring real-world outcomes.
 
-1. A robust, open-source implementation of the Free Association protocol.  
-2. Published technical standards for scaling as a global Digital Public Infrastructure.  
-3. Peer-reviewed academic papers comparing outcomes against traditional coordination methods.  
-4. Implementation guidelines and best practices for diverse organizational contexts (governmental, multilateral, philanthropic, and grassroots).  
-5. Policy recommendations for integration with existing coordination mechanisms across sectors.
+**Public Goods:**
+
+1. Open-source implementation (AGPL-3.0) of the Free Association protocol.  
+2. Published technical standards for global Digital Public Infrastructure.  
+3. Peer-reviewed research on coordination mechanisms.  
+4. Implementation guides for diverse contexts (governmental, multilateral, philanthropic, grassroots).  
+5. Living documentation of what works and what doesn't.
 
 #### **2.4 Why This is a Trustworthy DPI: Core Guarantees** {#2.4-why-this-is-a-trustworthy-dpi:-core-guarantees}
 
@@ -133,7 +135,7 @@ The system is built on mathematically proven principles that ensure its integrit
 
 #### **2.5 The Invitation** {#2.5-the-invitation}
 
-The technology exists. The code works. The need is undeniable. We have a rare window of opportunity to evolve beyond our failing systems. We invite you to join us at our global living labs to experience this new mode of coordination firsthand, and to partner with us in launching a pilot that can redefine how organizations coordinate resources for shared goals. Whether you represent a government, UN agency, philanthropic foundation, impact fund, or grassroots organization, this infrastructure is designed to serve your coordination needs while maintaining your autonomy and values.
+The technology exists. The code works. The need is undeniable. We have a rare window of opportunity to evolve beyond our failing systems. We invite you to join us at our global living labs to experience this new mode of coordination firsthand, and to experiment with pilots in your context. Whether you represent a government, UN agency, philanthropic foundation, impact fund, or grassroots organization, this infrastructure is designed to enable coordination while maintaining your autonomy and values. Participation is voluntary, open, and determined by mutual recognition - not by central gatekeepers.
 
 ### 3.0 Contacts and Resources {#3.0-contacts-and-resources}
 

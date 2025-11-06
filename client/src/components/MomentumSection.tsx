@@ -10,21 +10,21 @@ const momentum = [
   },
   {
     icon: DollarSign,
-    metric: "$73M",
-    label: "Funding Pipeline",
-    description: "Across UN agencies, foundations, and impact funds"
+    metric: "Open",
+    label: "Source & Transparent",
+    description: "All code and allocations publicly verifiable"
   },
   {
     icon: Building2,
-    metric: "15-20",
-    label: "Pilot Partners",
-    description: "Nations, multilaterals, and philanthropies ready to participate"
+    metric: "Global",
+    label: "Scale Ready",
+    description: "Architecture designed for planetary coordination"
   },
   {
     icon: TrendingUp,
-    metric: "$1B",
-    label: "Pilot Coordination",
-    description: "Resources to coordinate in 12-month landmark program"
+    metric: "Live",
+    label: "Working Demo",
+    description: "Fully functional prototype demonstrating real-time allocation"
   }
 ];
 

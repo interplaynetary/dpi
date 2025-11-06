@@ -13,10 +13,10 @@ const metrics = [
   },
   {
     icon: TrendingUp,
-    metric: "> 95%",
-    value: "Efficiency",
-    comparison: "vs. ~70%",
-    description: "Resources allocated with minimal overhead - maximum impact per dollar",
+    metric: "Minimal",
+    value: "Overhead",
+    comparison: "P2P Design",
+    description: "Resources flow directly between participants - no central intermediary taking a cut",
     color: "text-primary",
     bgColor: "bg-primary/10"
   },
@@ -73,22 +73,22 @@ export default function MetricsSection() {
 
         <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
           <div className="text-center space-y-3">
-            <h3 className="font-display font-bold text-2xl">Landmark Pilot Program</h3>
+            <h3 className="font-display font-bold text-2xl">Design Characteristics</h3>
             <div className="grid md:grid-cols-3 gap-8 pt-4">
               <div className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold text-primary">15-20</div>
-                <div className="text-sm text-muted-foreground">Participating Entities</div>
-                <div className="text-xs text-muted-foreground">Nations, UN agencies, foundations, impact funds</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">Scalable</div>
+                <div className="text-sm text-muted-foreground">Peer-to-Peer</div>
+                <div className="text-xs text-muted-foreground">From local communities to global institutions</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold text-primary">$1B</div>
-                <div className="text-sm text-muted-foreground">Resources Coordinated</div>
-                <div className="text-xs text-muted-foreground">Climate, health, humanitarian aid, development</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">Proven</div>
+                <div className="text-sm text-muted-foreground">Mathematically</div>
+                <div className="text-xs text-muted-foreground">Guaranteed fairness, convergence, strategy-proofness</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold text-primary">12 Mo.</div>
-                <div className="text-sm text-muted-foreground">Duration</div>
-                <div className="text-xs text-muted-foreground">Run in parallel with traditional processes</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">Open</div>
+                <div className="text-sm text-muted-foreground">Source & Access</div>
+                <div className="text-xs text-muted-foreground">AGPL-3.0 license, participate on your terms</div>
               </div>
             </div>
 

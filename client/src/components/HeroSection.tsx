@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, DollarSign, TrendingDown } from "lucide-react";
+import { ArrowRight, Users, Zap, Network } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToSection = (id: string) => {
@@ -10,7 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-3/5 -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.05),rgba(255,255,255,0))] -z-10" />
       
@@ -63,28 +63,23 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-chart-2" />
-                <span className="text-3xl md:text-4xl font-bold text-foreground">$73M</span>
+                <Zap className="w-5 h-5 text-chart-2" />
+                <span className="text-3xl md:text-4xl font-bold text-foreground">&lt;100ms</span>
               </div>
-              <span className="text-sm text-muted-foreground">Funding Pipeline</span>
+              <span className="text-sm text-muted-foreground">Allocation Convergence</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center gap-2">
-                <TrendingDown className="w-5 h-5 text-chart-2" />
-                <span className="text-3xl md:text-4xl font-bold text-foreground">83%</span>
+                <Network className="w-5 h-5 text-chart-2" />
+                <span className="text-3xl md:text-4xl font-bold text-foreground">P2P</span>
               </div>
-              <span className="text-sm text-muted-foreground">Cost Reduction</span>
+              <span className="text-sm text-muted-foreground">Decentralized Architecture</span>
             </div>
           </div>
           
           {/* Badges */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-12">
-            <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-              <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
-              <span className="text-sm font-medium text-primary">Peer-to-Peer</span>
-            </div>
+
             
             <div className="flex items-center gap-2 px-4 py-2 bg-chart-2/10 rounded-full border border-chart-2/20">
               <svg className="w-5 h-5 text-chart-2" fill="currentColor" viewBox="0 0 24 24">

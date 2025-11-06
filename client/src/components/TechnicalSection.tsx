@@ -121,7 +121,7 @@ export default function TechnicalSection() {
     <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
-          <h2 className="font-display font-bold text-4xl md:text-5xl">Why This Is Trustworthy DPI</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl">Digital Public Infrastructure</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Built on mathematically proven principles that ensure integrity and fairness
           </p>
@@ -191,7 +191,6 @@ export default function TechnicalSection() {
 
         <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
           <div className="text-center space-y-3">
-            <h3 className="font-display font-bold text-2xl">Digital Public Infrastructure</h3>
             <p className="text-lg leading-relaxed max-w-3xl mx-auto">
               Like GPS, internet protocols, and other foundational technologies - Free Association is designed as <span className="font-semibold text-primary">neutral, open infrastructure</span> that serves humanity's coordination needs without favoring any particular entity or ideology.
             </p>

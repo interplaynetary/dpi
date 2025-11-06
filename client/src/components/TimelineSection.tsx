@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Lightbulb, Rocket, Globe } from "lucide-react";
+import { Lightbulb, Rocket, Globe, ExternalLink } from "lucide-react";
+import { TreeMap } from "@/components/TreeMap";
 
 const phases = [
   {
@@ -19,13 +20,13 @@ const phases = [
   {
     icon: Rocket,
     phase: "NEXT",
-    title: "Landmark Pilot",
-    timeline: "12 Months",
-    description: "15-20 entities coordinating $1B across climate, health, humanitarian aid, and development",
+    title: "Partnership & Pilots",
+    timeline: "Ongoing",
+    description: "Collaborating with organizations ready to pilot values-driven coordination",
     outcomes: [
-      ">95% efficiency vs ~70% traditional",
-      "Fair distribution (Gini <0.3)",
-      "Parallel comparison with status quo"
+      "Real-world validation in diverse contexts",
+      "Fair, transparent allocation in practice",
+      "Open participation for interested entities"
     ],
     status: "ready",
     highlighted: true
@@ -104,29 +105,64 @@ export default function TimelineSection() {
           ))}
         </div>
         
-        <div className="max-w-4xl mx-auto mt-10">
-          <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
-            <div className="text-center space-y-4">
-              <p className="text-xl font-semibold mb-4">
-                We're seeking <span className="text-primary">$25 million</span> to fund the 12-month landmark pilot program
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="space-y-1">
-                  <div className="text-2xl font-bold text-primary">$8M</div>
-                  <div className="text-sm text-muted-foreground">Technology & Infrastructure</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-2xl font-bold text-primary">$10M</div>
-                  <div className="text-sm text-muted-foreground">Operations & Coordination</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-2xl font-bold text-primary">$5M</div>
-                  <div className="text-sm text-muted-foreground">Research & Validation</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-2xl font-bold text-primary">$2M</div>
-                  <div className="text-sm text-muted-foreground">Contingency</div>
-                </div>
+        <div className="max-w-5xl mx-auto mt-10 space-y-6">
+          <Card className="p-8 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
+            <div className="space-y-6">
+              <div className="text-center space-y-3">
+                <h3 className="text-2xl font-bold">Resource Allocation</h3>
+                <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+                  This distribution represents our initial planning. However, <span className="font-semibold text-foreground">final allocations will be determined by the Collective Recognition module</span> we're building - where contributors receive resources proportionally to mutual recognition.
+                </p>
+              </div>
+              
+              <div className="max-w-2xl mx-auto">
+                <TreeMap 
+                  data={{
+                    name: "Development Resources",
+                    children: [
+                      {
+                        name: "Operations & Coordination",
+                        value: 40,
+                        description: "Participant support & monitoring",
+                        color: "hsl(200, 85%, 55%)"
+                      },
+                      {
+                        name: "Technology & Infrastructure",
+                        value: 32,
+                        description: "Secure P2P software & servers",
+                        color: "hsl(150, 70%, 50%)"
+                      },
+                      {
+                        name: "Research & Validation",
+                        value: 20,
+                        description: "Academic validation & measurement",
+                        color: "hsl(280, 60%, 60%)"
+                      },
+                      {
+                        name: "Contingency",
+                        value: 8,
+                        description: "Adaptive capacity",
+                        color: "hsl(25, 85%, 60%)"
+                      }
+                    ]
+                  }}
+                  width={700}
+                  height={400}
+                />
+              </div>
+
+              <div className="text-center pt-4">
+                <a 
+                  href="https://playnet.gitbook.io/docs/collective-recognition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  Learn about Collective Recognition <ExternalLink className="w-4 h-4" />
+                </a>
+                <p className="text-xs text-muted-foreground mt-2 max-w-2xl mx-auto">
+                  Once implemented, resource allocation will be proportional to mutual recognition shares - determined by contributors themselves, not by central planning.
+                </p>
               </div>
             </div>
           </Card>

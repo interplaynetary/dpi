@@ -95,32 +95,50 @@ export default function HowItWorksSection() {
   };
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24">
+    <section id="how-it-works" className="py-16 md:py-24 relative overflow-x-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-2/5 -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.05),rgba(255,255,255,0))] -z-10" />
+      
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center space-y-3 mb-10">
+        <div className="text-center space-y-4 mb-12">
+          <div className="inline-block">
+            <div className="bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              Simple Yet Powerful
+            </div>
+          </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl">How It Works</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Three simple data points published by each participant - the algorithm handles the rest
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative group">
               <Card 
-                className="p-6 h-full hover-elevate transition-all cursor-pointer" 
+                className={`p-6 h-full transition-all duration-300 cursor-pointer border-2 ${
+                  expandedIndex === index 
+                    ? 'border-primary shadow-2xl shadow-primary/20 bg-gradient-to-br from-primary/5 to-transparent' 
+                    : 'border-border hover:border-primary/50 hover:shadow-lg'
+                }`}
                 data-testid={`card-step-${index}`}
                 onClick={() => toggleExpand(index)}
               >
                 <div className="space-y-4">
                   <div className="flex items-start justify-between">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <step.icon className="w-6 h-6 text-primary" />
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                      expandedIndex === index 
+                        ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30' 
+                        : 'bg-primary/10 text-primary group-hover:scale-110'
+                    }`}>
+                      <step.icon className="w-7 h-7" />
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-5xl font-bold text-muted-foreground/20">{step.number}</span>
+                      <span className={`text-5xl font-bold transition-colors duration-300 ${
+                        expandedIndex === index ? 'text-primary/30' : 'text-muted-foreground/20'
+                      }`}>{step.number}</span>
                       {expandedIndex === index ? (
-                        <ChevronUp className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+                        <ChevronUp className="w-5 h-5 text-primary flex-shrink-0 animate-bounce" />
                       ) : (
                         <ChevronDown className="w-5 h-5 text-muted-foreground flex-shrink-0" />
                       )}
@@ -222,29 +240,39 @@ export default function HowItWorksSection() {
                 </div>
               </Card>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                  <ArrowRight className="w-8 h-8 text-primary" />
+                <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
+                    <ArrowRight className="w-10 h-10 text-primary relative animate-pulse" />
+                  </div>
                 </div>
               )}
             </div>
           ))}
         </div>
         
-        <div className="mt-10">
-          <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/20 max-w-4xl mx-auto">
-            <div className="text-center space-y-3">
-              <h3 className="font-semibold text-xl">Automatic Optimization</h3>
-              <p className="text-lg leading-relaxed">
-                The algorithm automatically computes the <span className="font-semibold text-primary">optimal flow of resources</span>, prioritizing allocations between entities that <span className="font-semibold">mutually recognize each other</span>. The system converges to a fair and stable equilibrium in <span className="font-semibold text-chart-2">real-time</span>, continuously adapting as circumstances evolve.
-              </p>
-              <div className="pt-4 flex items-center justify-center gap-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-chart-2">5-10</div>
-                  <div className="text-sm text-muted-foreground">Calculation Rounds</div>
+        <div className="mt-12">
+          <Card className="p-8 bg-gradient-to-br from-primary/10 via-chart-3/5 to-chart-2/10 border-primary/30 max-w-4xl mx-auto shadow-xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-primary/5 to-transparent animate-pulse" />
+            <div className="relative">
+              <div className="text-center space-y-4">
+                <div className="inline-block p-3 bg-primary/10 rounded-2xl mb-2">
+                  <TrendingUp className="w-8 h-8 text-primary" />
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-chart-2">&lt;1s</div>
-                  <div className="text-sm text-muted-foreground">Convergence Time</div>
+                <h3 className="font-display font-bold text-2xl">Automatic Optimization</h3>
+                <p className="text-lg leading-relaxed">
+                  The algorithm automatically computes the <span className="font-semibold text-primary">optimal flow of resources</span>, prioritizing allocations between entities that <span className="font-semibold">mutually recognize each other</span>. The system converges to a fair and stable equilibrium in <span className="font-semibold text-chart-2">real-time</span>, continuously adapting as circumstances evolve.
+                </p>
+                <div className="pt-6 flex items-center justify-center gap-12">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-chart-2 mb-1">5-10</div>
+                    <div className="text-sm text-muted-foreground font-medium">Calculation Rounds</div>
+                  </div>
+                  <div className="h-12 w-px bg-border" />
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-chart-2 mb-1">&lt;1s</div>
+                    <div className="text-sm text-muted-foreground font-medium">Convergence Time</div>
+                  </div>
                 </div>
               </div>
             </div>

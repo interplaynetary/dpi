@@ -69,9 +69,9 @@
 ### Hero Section
 - Full viewport height (min-h-screen) with centered content
 - Large hero image showing global coordination/network visualization
-- Prominent headline emphasizing "COP30 Ready" and "$200K Investment"
+- Prominent headline emphasizing the core value proposition
 - Dual CTA buttons: primary "Get Started" + outline "View Demo"
-- Trust indicators below: "200+ Contributors | $73M Pipeline | 83% Cost Reduction"
+- Trust indicators below: "200+ Contributors | <100ms Convergence | P2P Architecture"
 
 ### Process Visualization
 - Three-column card layout with numbered steps
@@ -83,7 +83,7 @@
 - Large number typography (text-5xl font-bold) with colored accents
 - Smaller context text below each metric
 - Grid layout with subtle card backgrounds
-- Cost comparison chart showing 83% reduction
+- Focus on system characteristics: speed, fairness, decentralization
 
 ### Real-World Example
 - Visual flow diagram with country flags/icons
@@ -97,11 +97,11 @@
 - Progress indicators for in-progress items
 - Clean connector lines between milestones
 
-### Investment Breakdown
-- Tiered pricing cards with highlighted recommended tier
-- Pie chart or bar visualization for use of funds
-- ROI calculation prominently displayed
-- Clear CTAs for each funding level
+### Focus Areas
+- Cards describing current development priorities
+- Emphasis on open participation and mutual recognition
+- How contributors receive recognition through the system itself
+- Clear CTA for getting involved
 
 ### Live Demo Section
 - Embedded iframe with border and shadow styling
