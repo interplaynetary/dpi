@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Zap, Network } from "lucide-react";
+import { ArrowRight, Users, Zap, Waypoints } from "lucide-react";
 import { FloatingSDG } from "@/components/FloatingSDG";
 
 export default function HeroSection() {
@@ -80,7 +80,7 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center gap-2">
-                <Network className="w-5 h-5 text-chart-2" />
+                <Waypoints className="w-5 h-5 text-chart-2" />
                 <span className="text-3xl md:text-4xl font-bold text-foreground">P2P</span>
               </div>
               <span className="text-sm text-muted-foreground">Decentralized Architecture</span>
