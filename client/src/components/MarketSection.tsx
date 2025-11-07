@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Building2, Landmark, Globe2, Building } from "lucide-react";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 const useCases = [
   {
@@ -30,7 +31,15 @@ const useCases = [
 
 export default function MarketSection() {
   return (
-    <section id="impact" className="py-20 md:py-32">
+    <section id="impact" className="py-20 md:py-32 relative overflow-hidden">
+      {/* SDG Icons Background */}
+      <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+        <FloatingSDG sdgNumber={13} size="md" />
+        <FloatingSDG sdgNumber={3} size="lg" />
+        <FloatingSDG sdgNumber={11} size="sm" />
+        <FloatingSDG sdgNumber={2} size="md" />
+      </div>
+      
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl">Coordination Use Cases</h2>

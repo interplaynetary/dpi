@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { AlertTriangle, Clock, Globe, TrendingDown } from "lucide-react";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 const problems = [
   {
@@ -26,7 +27,14 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 relative overflow-hidden">
+      {/* SDG Icons Background */}
+      <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+        <FloatingSDG sdgNumber={2} size="sm" />
+        <FloatingSDG sdgNumber={8} size="md" />
+        <FloatingSDG sdgNumber={11} size="sm" />
+      </div>
+      
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
           <h2 className="font-display font-bold text-4xl md:text-5xl">The Coordination Challenge</h2>

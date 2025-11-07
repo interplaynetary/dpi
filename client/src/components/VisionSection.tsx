@@ -1,6 +1,7 @@
 import { Globe, Heart, Users, Leaf } from "lucide-react";
 import { NetworkBackground } from "./NetworkBackground";
 import { Card } from "@/components/ui/card";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 const impacts = [
   {
@@ -31,6 +32,16 @@ export default function VisionSection() {
       <div className="opacity-30">
         <NetworkBackground />
       </div>
+      
+      {/* SDG Icons Background */}
+      <div className="absolute inset-0 -z-10 opacity-15 pointer-events-none">
+        <FloatingSDG sdgNumber={13} size="lg" />
+        <FloatingSDG sdgNumber={3} size="md" />
+        <FloatingSDG sdgNumber={4} size="md" />
+        <FloatingSDG sdgNumber={10} size="lg" />
+        <FloatingSDG sdgNumber={17} size="md" />
+      </div>
+      
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center space-y-6 mb-12">
           <h2 className="font-display font-bold text-4xl md:text-6xl">The Vision</h2>

@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, DollarSign, Mail, Copy, Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -13,7 +14,14 @@ export default function ContactSection() {
     setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <section id="contact" className="py-16 md:py-24 bg-muted/30">
+    <section id="contact" className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
+      {/* SDG Icons Background */}
+      <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+        <FloatingSDG sdgNumber={17} size="lg" />
+        <FloatingSDG sdgNumber={16} size="md" />
+        <FloatingSDG sdgNumber={10} size="sm" />
+      </div>
+      
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
           <h2 className="font-display font-bold text-4xl md:text-5xl">The Invitation</h2>

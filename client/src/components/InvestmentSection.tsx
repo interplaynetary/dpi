@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Server, Users, Globe, ExternalLink } from "lucide-react";
 import { TreeMap } from "@/components/TreeMap";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 const initiatives = [
   {
@@ -39,7 +40,14 @@ export default function InvestmentSection() {
   };
 
   return (
-    <section id="investment" className="py-16 md:py-24">
+    <section id="investment" className="py-16 md:py-24 relative overflow-hidden">
+      {/* SDG Icons Background */}
+      <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+        <FloatingSDG sdgNumber={17} size="lg" />
+        <FloatingSDG sdgNumber={9} size="md" />
+        <FloatingSDG sdgNumber={16} size="sm" />
+      </div>
+      
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
           <h2 className="font-display font-bold text-4xl md:text-5xl">Current Focus Areas</h2>

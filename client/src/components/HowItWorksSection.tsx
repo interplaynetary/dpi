@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Percent, DollarSign, TrendingUp, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 const steps = [
   {
@@ -98,6 +99,13 @@ export default function HowItWorksSection() {
     <section id="how-it-works" className="py-16 md:py-24 relative overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-2/5 -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.05),rgba(255,255,255,0))] -z-10" />
+      
+      {/* SDG Icons Background */}
+      <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+        <FloatingSDG sdgNumber={5} size="sm" />
+        <FloatingSDG sdgNumber={8} size="md" />
+        <FloatingSDG sdgNumber={12} size="sm" />
+      </div>
       
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-4 mb-12">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Zap, Network } from "lucide-react";
+import { FloatingSDG } from "@/components/FloatingSDG";
 
 export default function HeroSection() {
   const scrollToSection = (id: string) => {
@@ -13,6 +14,15 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-3/5 -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.05),rgba(255,255,255,0))] -z-10" />
+      
+      {/* SDG Icons Floating Background */}
+      <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+        <FloatingSDG sdgNumber={1} size="md" />
+        <FloatingSDG sdgNumber={13} size="lg" />
+        <FloatingSDG sdgNumber={17} size="md" />
+        <FloatingSDG sdgNumber={10} size="lg" />
+        <FloatingSDG sdgNumber={16} size="md" />
+      </div>
       
       <div className="max-w-7xl mx-auto px-6 py-20 md:py-32">
         <div className="text-center space-y-8">
