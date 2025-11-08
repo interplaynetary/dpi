@@ -47,13 +47,6 @@ export default function Navigation() {
               How It Works
             </button>
             <button 
-              onClick={() => scrollToSection('impact')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="link-impact"
-            >
-              Impact
-            </button>
-            <button 
               onClick={() => scrollToSection('investment')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-investment"
