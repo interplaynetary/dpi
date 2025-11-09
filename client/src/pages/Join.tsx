@@ -37,7 +37,7 @@ export default function Join() {
             <Card className="p-8">
               <h2 className="font-display font-bold text-3xl mb-4">The Problem</h2>
               <p className="text-muted-foreground leading-relaxed">
-                From climate adaptation to pandemic response, our coordination mechanisms are failing. Pledges stall in bureaucracy, emergency resources are paralyzed by political negotiation, and aid flows are inequitable. The challenge isn't lack of resources or goodwill—it's inadequate coordination infrastructure. We're solving 21st-century polycrises with 20th-century tools.
+                From climate adaptation to pandemic response, our coordination mechanisms are failing. Pledges stall in bureaucracy, emergency resources are paralyzed by political negotiation, and aid flows are inequitable. The challenge isn't lack of resources or goodwill — it's inadequate coordination infrastructure. We're solving 21st-century polycrises with 20th-century tools.
               </p>
             </Card>
 
