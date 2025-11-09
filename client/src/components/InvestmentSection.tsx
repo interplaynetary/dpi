@@ -20,7 +20,7 @@ const initiatives = [
   {
     icon: Server,
     name: "P2P Infrastructure",
-    description: "Federated, privacy-preserving architecture enabling coordination without central control",
+    description: "Secure, federated architecture enabling coordination without central control",
     color: "text-chart-3"
   },
   {

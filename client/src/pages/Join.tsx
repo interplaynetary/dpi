@@ -152,42 +152,6 @@ export default function Join() {
               </p>
             </Card>
 
-            {/* Core Guarantees */}
-            <Card className="p-8 bg-gradient-to-br from-primary/5 to-chart-3/5">
-              <h2 className="font-display font-bold text-3xl mb-6">Why This Is Trustworthy: Core Guarantees</h2>
-              <p className="text-muted-foreground mb-6">The system is built on mathematically proven principles:</p>
-              <div className="grid gap-4">
-                <div className="flex gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-foreground">Guaranteed Fairness:</strong>
-                    <span className="text-muted-foreground">Allocations strictly proportional to mutual recognition and need</span>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-foreground">Strategy-Proof:</strong>
-                    <span className="text-muted-foreground">Honest reporting is always the best strategy; gaming the system is neutralized</span>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-foreground">Fast Convergence:</strong>
-                    <span className="text-muted-foreground">Reaches stable optimal state in 5-10 calculation rounds</span>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-foreground">Privacy-Preserving:</strong>
-                    <span className="text-muted-foreground">Each entity only publishes its own data; no central authority controls outcomes</span>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
             {/* The Coalition */}
             <Card className="p-8">
               <h2 className="font-display font-bold text-3xl mb-6">The Coalition: Global Living Labs + Pilot Program</h2>
