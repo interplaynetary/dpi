@@ -110,7 +110,7 @@ For detailed troubleshooting and configuration options, see:
 - `GITHUB_PAGES_SETUP.md` - Complete deployment guide
 - `README.md` - Updated with GitHub Pages section
 
-Questions? Contact: ruzgar@playnet.lol
+Questions? Contact: info@openassociation.org
 
 ---
 

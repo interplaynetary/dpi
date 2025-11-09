@@ -171,7 +171,7 @@ If you encounter issues:
 1. Check the GitHub Actions logs in the Actions tab
 2. Review the troubleshooting section above
 3. Open an issue on the repository
-4. Contact: ruzgar@playnet.lol
+4. Contact: info@openassociation.org
 
 ---
 

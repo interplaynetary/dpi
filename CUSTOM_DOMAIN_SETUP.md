@@ -200,7 +200,7 @@ If you encounter issues:
 3. Check GitHub Actions logs for build/deployment errors
 4. Review GitHub Pages settings in your repository
 
-**Contact:** ruzgar@playnet.lol
+**Contact:** info@openassociation.org
 
 ---
 

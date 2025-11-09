@@ -57,8 +57,26 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-semibold mb-4">Support</h3>
+            <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a 
+                  href="mailto:info@openassociation.org"
+                  className="hover:text-foreground transition-colors flex items-center gap-1"
+                  data-testid="link-footer-email-info"
+                >
+                  info@openassociation.org
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:coalition@openassociation.org"
+                  className="hover:text-foreground transition-colors flex items-center gap-1"
+                  data-testid="link-footer-email-coalition"
+                >
+                  coalition@openassociation.org
+                </a>
+              </li>
               <li>
                 <a 
                   href="https://opencollective.com/playnet" 
@@ -119,7 +137,7 @@ export default function Footer() {
             </div>
             
             <p className="text-sm text-muted-foreground">
-              © 2025 Free-Association. Licensed under AGPL-3.0
+              © 2025 Open Association. Licensed under AGPL-3.0
             </p>
           </div>
         </div>
