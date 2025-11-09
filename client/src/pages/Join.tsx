@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import CoalitionMembersSection from "@/components/CoalitionMembersSection";
 import { NetworkBackground } from "@/components/NetworkBackground";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -267,6 +268,15 @@ export default function Join() {
               </div>
             </Card>
 
+          </div>
+        </section>
+
+        {/* Coalition Members Section */}
+        <CoalitionMembersSection />
+
+        {/* Sign the Pledge Section */}
+        <section className="pb-16 px-6">
+          <div className="max-w-4xl mx-auto space-y-12">
             {/* Sign the Pledge */}
             <Card className="p-8 bg-gradient-to-br from-primary/10 to-chart-3/10 border-primary text-center">
               <h2 className="font-display font-bold text-3xl mb-4">Sign the Pledge</h2>
@@ -323,7 +333,6 @@ export default function Join() {
                 "Moving beyond markets, charity, and bureaucracy to enable voluntary, fair, self-organizing coordination for humanity's greatest challenges."
               </p>
             </div>
-
           </div>
         </section>
         
