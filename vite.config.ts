@@ -5,8 +5,9 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 // For GitHub Pages: set base to repo name if deploying to username.github.io/repo-name/
 // Leave as '/' for custom domains or username.github.io
+// Using '/' for custom domain: ppenassociation.org
 const base = process.env.GITHUB_PAGES === 'true' 
-  ? (process.env.BASE_PATH || '/dpi/')
+  ? (process.env.BASE_PATH || '/')
   : '/';
 
 export default defineConfig({
