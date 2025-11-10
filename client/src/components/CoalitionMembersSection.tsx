@@ -4,6 +4,7 @@ import allernetLogo from "@/media/allternet.jpg";
 import dreamtankLogo from "@/media/dreamtank.png";
 import modularCommonsLogo from "@/media/modular-commons.png";
 import solarPunkNowLogo from "@/media/solar-punk-now.png";
+import beTogetherLogo from "@/media/be-together.png";
 
 const coalitionMembers = [
   { name: "Playnet", logo: playnetLogo, url: "https://playnet.lol" },
@@ -11,6 +12,7 @@ const coalitionMembers = [
   { name: "Dreamtank", logo: dreamtankLogo, url: "https://wearedreamtank.org/" },
   { name: "Modular Commons", logo: modularCommonsLogo, url: "https://modularcommons.com" },
   { name: "Solar Punk Now", logo: solarPunkNowLogo, url: "https://solarpunknow.world" },
+  { name: "Be Together", logo: beTogetherLogo, url: "https://betogether.org" },
 ];
 
 export default function CoalitionMembersSection() {
