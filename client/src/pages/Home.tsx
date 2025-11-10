@@ -10,6 +10,8 @@ import InvestmentSection from "@/components/InvestmentSection";
 import DemoSection from "@/components/DemoSection";
 import VisionSection from "@/components/VisionSection";
 import ContactSection from "@/components/ContactSection";
+import PledgeFormSection from "@/components/PledgeFormSection";
+import CoalitionMembersSection from "@/components/CoalitionMembersSection";
 import Footer from "@/components/Footer";
 import { NetworkBackground } from "@/components/NetworkBackground";
 

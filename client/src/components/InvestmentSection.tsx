@@ -74,17 +74,32 @@ export default function InvestmentSection() {
           ))}
         </div>
 
-        <div className="max-w-5xl mx-auto mt-12 space-y-6">
-          <Card className="p-8 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
-            <div className="space-y-6">
-              <div className="text-center space-y-3">
-                <h3 className="text-2xl font-bold">Collective Resource Distribution</h3>
-                <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto mt-12">
+          <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Left Side - Text Content */}
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold">Collective Resource Distribution</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   This distribution represents our initial planning. However, <span className="font-semibold text-foreground">final allocations will be determined by the Collective Recognition module</span> we're building - where contributors receive resources proportionally to mutual recognition.
                 </p>
+                <div className="pt-2">
+                  <a 
+                    href="https://playnet.gitbook.io/docs/collective-recognition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                  >
+                    Learn about Collective Recognition <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Resource allocation will be proportional to mutual recognition shares - determined by contributors themselves, not by central planning.
+                  </p>
+                </div>
               </div>
-              
-              <div className="max-w-2xl mx-auto">
+
+              {/* Right Side - TreeMap */}
+              <div className="flex items-center justify-center">
                 <TreeMap 
                   data={{
                     name: "Development Resources",
@@ -115,23 +130,9 @@ export default function InvestmentSection() {
                       }
                     ]
                   }}
-                  width={700}
-                  height={400}
+                  width={500}
+                  height={350}
                 />
-              </div>
-
-              <div className="text-center pt-4">
-                <a 
-                  href="https://playnet.gitbook.io/docs/collective-recognition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                >
-                  Learn about Collective Recognition <ExternalLink className="w-4 h-4" />
-                </a>
-                <p className="text-xs text-muted-foreground mt-2 max-w-2xl mx-auto">
-                  Once implemented, resource allocation will be proportional to mutual recognition shares - determined by contributors themselves, not by central planning.
-                </p>
               </div>
             </div>
           </Card>

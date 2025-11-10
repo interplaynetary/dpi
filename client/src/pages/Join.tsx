@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CoalitionMembersSection from "@/components/CoalitionMembersSection";
+import PledgeFormSection from "@/components/PledgeFormSection";
 import { NetworkBackground } from "@/components/NetworkBackground";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -274,67 +275,8 @@ export default function Join() {
         {/* Coalition Members Section */}
         <CoalitionMembersSection />
 
-        {/* Sign the Pledge Section */}
-        <section className="pb-16 px-6">
-          <div className="max-w-4xl mx-auto space-y-12">
-            {/* Sign the Pledge */}
-            <Card className="p-8 bg-gradient-to-br from-primary/10 to-chart-3/10 border-primary text-center">
-              <h2 className="font-display font-bold text-3xl mb-4">Sign the Pledge</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                The technology exists. The code works. The need is undeniable.
-              </p>
-              
-              <div className="space-y-4 max-w-2xl mx-auto mb-8">
-                <p className="text-left text-sm text-muted-foreground mb-4">
-                  To formally join the Free Association Coalition, please contact us at:
-                </p>
-                <Button className="w-full gap-2" size="lg" asChild>
-                  <a href="mailto:coalition@openassociation.org">
-                    Join the Coalition
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </Button>
-              </div>
-              
-              <div className="pt-6 border-t border-border/50">
-                <h3 className="font-semibold text-lg mb-4">Resources & Contact</h3>
-                <div className="grid sm:grid-cols-2 gap-3 max-w-xl mx-auto text-sm">
-                  <Button variant="outline" className="gap-2" asChild>
-                    <a href="https://playnet.gitbook.io/docs" target="_blank" rel="noopener noreferrer">
-                      📖 Documentation
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" className="gap-2" asChild>
-                    <a href="https://github.com/interplaynetary/free-association" target="_blank" rel="noopener noreferrer">
-                      🔬 Mathematical Proofs
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" className="gap-2" asChild>
-                    <a href="https://free.playnet.lol" target="_blank" rel="noopener noreferrer">
-                      💻 Working Demo
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" className="gap-2" asChild>
-                    <a href="mailto:info@openassociation.org">
-                      ✉️ Questions
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </Card>
-
-            {/* Quote */}
-            <div className="text-center py-8">
-              <p className="text-lg italic text-muted-foreground max-w-3xl mx-auto">
-                "Moving beyond markets, charity, and bureaucracy to enable voluntary, fair, self-organizing coordination for humanity's greatest challenges."
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Pledge Form Section */}
+        <PledgeFormSection />
         
         <Footer />
       </div>
