@@ -154,7 +154,7 @@ export default function PledgeFormSection() {
                       asChild
                     >
                       <a
-                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}&currency=EUR`}
+                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -181,7 +181,7 @@ export default function PledgeFormSection() {
                       asChild
                     >
                       <a
-                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}&currency=EUR`}
+                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -208,7 +208,7 @@ export default function PledgeFormSection() {
                       asChild
                     >
                       <a
-                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}&currency=EUR`}
+                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
