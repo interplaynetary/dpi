@@ -59,8 +59,9 @@ export default function PledgeFormSection() {
 
   const onSubmit = async (data: PledgeFormData) => {
     try {
-      // Get Google Sheets endpoint URL from environment variable
-      const googleSheetsUrl = import.meta.env.VITE_GOOGLE_SHEETS_URL;
+      // Get Google Sheets endpoint URL from environment variable or use fallback
+      const googleSheetsUrl = import.meta.env.VITE_GOOGLE_SHEETS_URL || 
+        'https://script.google.com/macros/s/AKfycbxQ-rUSwysn_2v1tNNk2-t3cCnlBtMIqPaaocrQQSCAYk3YaKpPUyb1rF_zAjB9R3ydrQ/exec';
       
       if (!googleSheetsUrl) {
         console.error('Google Sheets URL not configured');
