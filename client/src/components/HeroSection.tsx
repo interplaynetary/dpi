@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-x-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-3/5 -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.05),rgba(255,255,255,0))] -z-10" />
       

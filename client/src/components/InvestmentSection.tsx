@@ -97,7 +97,7 @@ export default function InvestmentSection() {
                   </p>
                 </div>
               </div>
-
+              
               {/* Right Side - TreeMap */}
               <div className="flex items-center justify-center">
                 <TreeMap 

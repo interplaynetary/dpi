@@ -33,6 +33,9 @@ interface PledgeFormData {
   messengerHandle: string;
   country: string;
   message: string;
+  membershipActive: boolean;
+  membershipSupporting: boolean;
+  membershipAlly: boolean;
   consentTransactional: boolean;
   consentMarketing: boolean;
 }
@@ -52,6 +55,9 @@ export default function PledgeFormSection() {
       messengerHandle: "",
       country: "",
       message: "",
+      membershipActive: false,
+      membershipSupporting: false,
+      membershipAlly: false,
       consentTransactional: false,
       consentMarketing: false,
     },
@@ -459,6 +465,85 @@ export default function PledgeFormSection() {
                 )}
               />
 
+              {/* Coalition Membership Type */}
+              <div className="space-y-4 pt-6 border-t">
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Coalition Membership</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Select the level(s) of engagement that align with your capacity and intention:
+                  </p>
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="membershipActive"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-base font-semibold">
+                          Active Member
+                        </FormLabel>
+                        <FormDescription className="text-sm">
+                          Participating in pilots, living labs, and resource coordination experiments
+                        </FormDescription>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="membershipSupporting"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-base font-semibold">
+                          Supporting Member
+                        </FormLabel>
+                        <FormDescription className="text-sm">
+                          Attending demonstrations, sharing learnings, connecting networks
+                        </FormDescription>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="membershipAlly"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-base font-semibold">
+                          Aligned Ally
+                        </FormLabel>
+                        <FormDescription className="text-sm">
+                          Endorsing the vision and staying connected to coalition developments
+                        </FormDescription>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+              </div>
+
               {/* Consent Checkboxes */}
               <div className="space-y-6 pt-4 border-t">
                 <FormField
@@ -474,7 +559,7 @@ export default function PledgeFormSection() {
                       </FormControl>
                       <div className="space-y-1 leading-none">
                         <FormLabel className="text-sm font-normal">
-                          By checking this box, I consent to receive transactional messages related to my donation or joining of the Free Association Coalition. These messages may include appointment reminders, order confirmations, receipts, and stewardship updates related to this initiative.
+                          By checking this box, I consent to receive messages related to my donation or joining of the Free Association Coalition. These messages may include appointment reminders, order confirmations, receipts, and coalition updates related to this initiative.
                         </FormLabel>
                         <FormDescription className="text-xs">
                           Message & data rates may apply. Frequency may vary. You can reply HELP for help or STOP to opt out.
@@ -497,7 +582,7 @@ export default function PledgeFormSection() {
                       </FormControl>
                       <div className="space-y-1 leading-none">
                         <FormLabel className="text-sm font-normal">
-                          By checking this box, I consent to receive occasional marketing and community updates from the Free Association Coalition. These may include invitations to events, new partnership opportunities, campaign updates, and stories of impact.
+                          By checking this box, I consent to receive occasional opportunities and community updates from the Free Association Coalition. These may include invitations to events, new partnership opportunities, campaign updates, and stories of impact.
                         </FormLabel>
                         <FormDescription className="text-xs">
                           Message & data rates may apply. Frequency may vary. You can reply HELP for help or STOP to opt out at any time.

@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
       <NetworkBackground />
-      <div className="relative z-10 overflow-x-hidden">
+      <div className="relative z-10">
         <Navigation />
         <HeroSection />
         <ProblemSection />

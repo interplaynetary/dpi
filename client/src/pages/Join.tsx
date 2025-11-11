@@ -212,7 +212,7 @@ export default function Join() {
 
             {/* Coalition Commitments */}
             <Card className="p-8 border-primary/50">
-              <h2 className="font-display font-bold text-3xl mb-6">Coalition Member Commitments</h2>
+              <h2 className="font-display font-bold text-3xl mb-6">Coalition Active Member Commitments</h2>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
@@ -270,15 +270,16 @@ export default function Join() {
             </Card>
 
           </div>
+          <PledgeFormSection />
+        
+        <Footer />
         </section>
 
         {/* Coalition Members Section */}
-        <CoalitionMembersSection />
+        {/* <CoalitionMembersSection /> */}
 
         {/* Pledge Form Section */}
-        <PledgeFormSection />
-        
-        <Footer />
+
       </div>
     </div>
   );
