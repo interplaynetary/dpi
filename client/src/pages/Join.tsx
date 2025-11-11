@@ -156,53 +156,73 @@ export default function Join() {
 
             {/* The Coalition */}
             <Card className="p-8">
-              <h2 className="font-display font-bold text-3xl mb-6">The Coalition: Global Living Labs + Pilot Program</h2>
+              <h2 className="font-display font-bold text-3xl mb-6">The Free Association Coalition</h2>
+              
+              <p className="text-muted-foreground mb-6">
+                We are organizing a joint initiative bringing together organizations worldwide to experience this coordination paradigm firsthand. Both Global Living Labs and Organizational Pilots are happening simultaneously.
+              </p>
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-xl mb-2">Phase 1: Global Living Labs</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="font-bold text-xl mb-2 flex items-center gap-2">
+                    <span className="text-primary">•</span> Global Living Labs
+                  </h3>
+                  <p className="text-muted-foreground mb-3">
                     Interactive demonstrations where participants engage with real-time simulations of resource mapping and allocation across diverse contexts.
+                  </p>
+                  <p className="text-sm text-muted-foreground italic">
+                    Objectives: Demonstrate the platform, convene stakeholders, build credibility through partnerships, and gather feedback from diverse contexts
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="font-bold text-xl mb-3">Phase 2: Landmark Pilot</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li><strong className="text-foreground">Scope:</strong> 15-20 entities coordinating up to <strong className="text-primary">$1 billion</strong> across climate, health, aid, and development</li>
-                    <li><strong className="text-foreground">Duration:</strong> 12 months in parallel with traditional processes for direct comparison</li>
+                  <h3 className="font-bold text-xl mb-2 flex items-center gap-2">
+                    <span className="text-primary">•</span> Organizational Pilots
+                  </h3>
+                  <p className="text-muted-foreground mb-3">
+                    We invite organizations to pilot resource coordination using a portion of their discretionary budget or grant portfolio. Each organization operates autonomously while being part of the coalition network.
+                  </p>
+                  <ul className="space-y-2 text-muted-foreground mb-3">
+                    <li><strong className="text-foreground">Your Organization Chooses:</strong></li>
+                    <li className="ml-4">• <strong className="text-foreground">Scale:</strong> What portion of your budget to pilot with (e.g., $50-100M)</li>
+                    <li className="ml-4">• <strong className="text-foreground">Focus Area:</strong> Which programs align with coalition priorities (climate, health, humanitarian response, sustainable development)</li>
+                    <li className="ml-4">• <strong className="text-foreground">Timeline:</strong> Your own 6-12 month pilot period</li>
+                    <li className="ml-4">• <strong className="text-foreground">Partners:</strong> Which other coalition members you recognize and coordinate with</li>
                   </ul>
+                  <p className="text-sm text-muted-foreground italic">
+                    Coalition Network: 15-20 active members running pilots, plus supporting members and aligned allies. Total network resources: $500M-$1B+ collectively coordinated.
+                  </p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold mb-3">Success Metrics:</h4>
+                  <h4 className="font-semibold mb-3">Key Success Metrics (For Active Members):</h4>
                   <div className="grid sm:grid-cols-2 gap-3">
                     <div className="flex gap-2 items-start">
                       <span className="text-2xl">⚡</span>
                       <div>
                         <strong className="block text-foreground">Speed</strong>
-                        <span className="text-sm text-muted-foreground">Real-time convergence (vs. 90+ day cycles)</span>
+                        <span className="text-sm text-muted-foreground">&lt;48 hours from need to commitment (vs. typical 90+ days)</span>
                       </div>
                     </div>
                     <div className="flex gap-2 items-start">
                       <span className="text-2xl">💰</span>
                       <div>
                         <strong className="block text-foreground">Efficiency</strong>
-                        <span className="text-sm text-muted-foreground">&gt;95% resource allocation (vs. ~70%)</span>
+                        <span className="text-sm text-muted-foreground">&gt;95% resource deployment (vs. typical ~70%)</span>
                       </div>
                     </div>
                     <div className="flex gap-2 items-start">
-                      <span className="text-2xl">⚖️</span>
+                      <span className="text-2xl">🎯</span>
                       <div>
-                        <strong className="block text-foreground">Fairness</strong>
-                        <span className="text-sm text-muted-foreground">Gini coefficient &lt;0.3</span>
+                        <strong className="block text-foreground">Alignment</strong>
+                        <span className="text-sm text-muted-foreground">Resources reach mission-aligned entities you recognize</span>
                       </div>
                     </div>
                     <div className="flex gap-2 items-start">
                       <span className="text-2xl">🔄</span>
                       <div>
                         <strong className="block text-foreground">Adaptability</strong>
-                        <span className="text-sm text-muted-foreground">Immediate re-convergence to new crises</span>
+                        <span className="text-sm text-muted-foreground">Real-time responsiveness when priorities change</span>
                       </div>
                     </div>
                   </div>
@@ -210,62 +230,107 @@ export default function Join() {
               </div>
             </Card>
 
-            {/* Coalition Commitments */}
+            {/* Coalition Membership Tiers */}
             <Card className="p-8 border-primary/50">
-              <h2 className="font-display font-bold text-3xl mb-6">Coalition Active Member Commitments</h2>
+              <h2 className="font-display font-bold text-3xl mb-6">Coalition Membership Tiers</h2>
               
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h3 className="font-bold text-xl mb-4 text-primary">We Pledge To:</h3>
-                  <ul className="space-y-3">
+              <p className="text-muted-foreground mb-6">
+                Join the coalition at a level that matches your capacity and readiness:
+              </p>
+              
+              <div className="space-y-6">
+                <div className="border-l-4 border-primary pl-4">
+                  <h3 className="font-bold text-xl mb-2 flex items-center gap-2">
+                    Active Member
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2">Organizations piloting resource coordination</p>
+                  <ul className="space-y-2 text-sm">
                     <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span><strong>Participate</strong> in Global Living Labs to experience this coordination paradigm firsthand</span>
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span>Implement the system with a portion of your discretionary budget or grant portfolio</span>
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span><strong>Publish</strong> our recognition weights, capacity, and needs transparently on the platform</span>
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span>Publish recognition weights, capacity, and needs on the platform</span>
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span><strong>Coordinate</strong> resources through mutual recognition alongside existing mechanisms</span>
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span>Participate in pilot coalition learning and quarterly coordination reviews</span>
                     </li>
                     <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span><strong>Advocate</strong> for this DPI as trustworthy infrastructure for planetary coordination</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span><strong>Contribute</strong> feedback to refine the platform for diverse organizational contexts</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="font-bold text-xl mb-4 text-chart-3">We Receive:</h3>
-                  <ul className="space-y-3">
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-chart-3 shrink-0 mt-0.5" />
-                      <span><strong>Real-time coordination</strong> adapting within seconds to changing needs</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-chart-3 shrink-0 mt-0.5" />
-                      <span><strong>Transparent allocation</strong> based on mathematical fairness, not political negotiation</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-chart-3 shrink-0 mt-0.5" />
-                      <span><strong>Maintained autonomy</strong> – no central authority controls your data or decisions</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-chart-3 shrink-0 mt-0.5" />
-                      <span><strong>Strategy-proof infrastructure</strong> – honest reporting rewarded by design</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-chart-3 shrink-0 mt-0.5" />
-                      <span><strong>Partnership network</strong> with forward-thinking organizations solving global challenges</span>
+                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span>Receive priority technical support and platform refinements</span>
                     </li>
                   </ul>
                 </div>
+
+                <div className="border-l-4 border-chart-4 pl-4">
+                  <h3 className="font-bold text-xl mb-2 flex items-center gap-2">
+                    Supporting Member
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2">Organizations exploring and learning</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-4 shrink-0 mt-0.5" />
+                      <span>Attend living labs and coordination demonstrations</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-4 shrink-0 mt-0.5" />
+                      <span>Access pilot data and learnings from active members</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-4 shrink-0 mt-0.5" />
+                      <span>Participate in coalition convenings and feedback sessions</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-4 shrink-0 mt-0.5" />
+                      <span>No resource commitment required – observe and evaluate</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-l-4 border-chart-3 pl-4">
+                  <h3 className="font-bold text-xl mb-2 flex items-center gap-2">
+                    Aligned Ally
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2">Organizations endorsing the vision</p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-3 shrink-0 mt-0.5" />
+                      <span>Stay connected to coalition developments and findings</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-3 shrink-0 mt-0.5" />
+                      <span>Share insights from your network and context</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-chart-3 shrink-0 mt-0.5" />
+                      <span>Consider future active participation as capacity allows</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-8 p-4 bg-primary/5 rounded-lg">
+                <h4 className="font-semibold mb-3">Coalition Benefits (All Tiers):</h4>
+                <ul className="grid md:grid-cols-2 gap-3 text-sm">
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Shared Infrastructure:</strong> Access to the proven DPI platform</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Network Effects:</strong> More organizations = more coordination opportunities</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Peer Learning:</strong> Regular convenings to share insights and best practices</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary">•</span>
+                    <span><strong>Collective Legitimacy:</strong> Part of a recognized coalition strengthening systems change</span>
+                  </li>
+                </ul>
               </div>
             </Card>
 
@@ -284,4 +349,5 @@ export default function Join() {
     </div>
   );
 }
+
 

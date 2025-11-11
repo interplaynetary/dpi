@@ -5,7 +5,7 @@ import { TreeMap } from "@/components/TreeMap";
 const phases = [
   {
     icon: Lightbulb,
-    phase: "CURRENT",
+    phase: "HAPPENING NOW",
     title: "Global Living Labs",
     timeline: "Ongoing",
     description: "Interactive demonstrations at UN agencies, foundations, and coordination bodies worldwide",
@@ -15,18 +15,19 @@ const phases = [
       "Build credibility through partnerships",
       "Gather feedback & iterate"
     ],
-    status: "in_progress"
+    status: "in_progress",
+    highlighted: true
   },
   {
     icon: Rocket,
-    phase: "NEXT",
-    title: "Partnership & Pilots",
+    phase: "HAPPENING NOW",
+    title: "Organizational Pilots",
     timeline: "Ongoing",
-    description: "Collaborating with organizations ready to pilot values-driven coordination",
+    description: "Organizations piloting with portions of their budgets while being part of the coalition network",
     outcomes: [
       "Real-world validation in diverse contexts",
-      "Fair, transparent allocation in practice",
-      "Open participation for interested entities"
+      "Each organization chooses scale and focus",
+      "15-20 active members coordinating $500M-$1B+"
     ],
     status: "ready",
     highlighted: true
@@ -39,7 +40,7 @@ const phases = [
     description: "Open-source DPI adopted by governments, multilaterals, and civil society worldwide",
     outcomes: [
       "Published technical standards",
-      "Impleentation guidelines",
+      "Implementation guidelines",
       "Policy integration recommendations"
     ],
     status: "planned"
