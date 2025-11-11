@@ -85,7 +85,7 @@ export default function Join() {
               </div>
               
               <p className="text-muted-foreground mt-6">
-                This peer-to-peer Digital Public Infrastructure (DPI) allows any entity—from nation-states and UN agencies to philanthropic foundations, impact funds, and grassroots organizations—to coordinate resources through transparent, automatic allocation based on mutual recognition.
+                This peer-to-peer Digital Public Infrastructure (DPI) allows any entity — from nation-states and UN agencies to philanthropic foundations, impact funds, and grassroots organizations — to coordinate resources through transparent, automatic allocation based on mutual recognition.
               </p>
             </Card>
 
@@ -171,7 +171,7 @@ export default function Join() {
                     Interactive demonstrations where participants engage with real-time simulations of resource mapping and allocation across diverse contexts.
                   </p>
                   <p className="text-sm text-muted-foreground italic">
-                    Objectives: Demonstrate the platform, convene stakeholders, build credibility through partnerships, and gather feedback from diverse contexts
+                    Objectives: Demonstrate the protocol, convene stakeholders, build credibility through partnerships, and gather feedback from diverse contexts
                   </p>
                 </div>
                 
@@ -251,7 +251,7 @@ export default function Join() {
                     </li>
                     <li className="flex gap-2">
                       <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                      <span>Publish recognition weights, capacity, and needs on the platform</span>
+                      <span>Publish recognition weights, capacity, and needs on the protocol</span>
                     </li>
                     <li className="flex gap-2">
                       <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -259,7 +259,7 @@ export default function Join() {
                     </li>
                     <li className="flex gap-2">
                       <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                      <span>Receive priority technical support and platform refinements</span>
+                      <span>Receive priority technical support and protocol refinements</span>
                     </li>
                   </ul>
                 </div>
@@ -316,7 +316,7 @@ export default function Join() {
                 <ul className="grid md:grid-cols-2 gap-3 text-sm">
                   <li className="flex gap-2">
                     <span className="text-primary">•</span>
-                    <span><strong>Shared Infrastructure:</strong> Access to the proven DPI platform</span>
+                    <span><strong>Shared Infrastructure:</strong> Access to the proven DPI protocol</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-primary">•</span>
