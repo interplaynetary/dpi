@@ -30,7 +30,7 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
     
     for (let i = 0; i < nodeCount; i++) {
       const angle = Math.random() * Math.PI * 2;
-      const r = Math.sqrt(Math.random()) * (radius - 8);
+      const r = Math.sqrt(Math.random()) * (radius - 12); // More space for bigger nodes
       const x = centerX + r * Math.cos(angle);
       const y = centerY + r * Math.sin(angle);
       
@@ -62,8 +62,8 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
         const dy = newY - centerY;
         const distFromCenter = Math.sqrt(dx * dx + dy * dy);
         
-        if (distFromCenter > radius - 6) {
-          // Bounce off edge
+        if (distFromCenter > radius - 12) {
+          // Bounce off edge (with more margin for bigger nodes)
           const nx = dx / distFromCenter;
           const ny = dy / distFromCenter;
           const dot = newVx * nx + newVy * ny;
@@ -71,8 +71,8 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
           newVy = newVy - 2 * dot * ny;
           
           // Push back inside
-          newX = centerX + nx * (radius - 6);
-          newY = centerY + ny * (radius - 6);
+          newX = centerX + nx * (radius - 12);
+          newY = centerY + ny * (radius - 12);
         }
 
         return {
@@ -101,7 +101,7 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
 
   // Calculate connections
   const connections: Array<{from: Node, to: Node, distance: number, hue: number}> = [];
-  const connectionDistance = 25; // Max distance for connections
+  const connectionDistance = 30; // Max distance for connections (increased for visibility)
 
   nodes.forEach((node, i) => {
     nodes.forEach((otherNode, j) => {
@@ -155,7 +155,7 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
 
       {/* Connections */}
       {connections.map((conn, idx) => {
-        const opacity = Math.max((1 - conn.distance / connectionDistance) * 0.8, 0.3);
+        const opacity = Math.max((1 - conn.distance / connectionDistance) * 0.8, 0.4);
         return (
           <line
             key={`conn-${idx}`}
@@ -163,8 +163,8 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
             y1={conn.from.y}
             x2={conn.to.x}
             y2={conn.to.y}
-            stroke={`hsl(${conn.hue}, 90%, 60%)`}
-            strokeWidth="1.5"
+            stroke={`hsl(${conn.hue}, 90%, 65%)`}
+            strokeWidth="3.5"
             strokeOpacity={opacity}
             strokeLinecap="round"
           />
@@ -178,22 +178,22 @@ export const CoalitionLogo = ({ size = 200, className = '' }: CoalitionLogoProps
           <circle
             cx={node.x}
             cy={node.y}
-            r="4.5"
+            r="10.5"
             fill={`hsl(${node.hue}, 95%, 70%)`}
-            opacity="0.3"
+            opacity="0.35"
           />
           {/* Main node */}
           <circle
             cx={node.x}
             cy={node.y}
-            r="3"
+            r="6.5"
             fill={`url(#node-gradient-${node.id})`}
           />
           {/* Center highlight */}
           <circle
             cx={node.x}
             cy={node.y}
-            r="1"
+            r="2.5"
             fill={`hsl(${node.hue}, 100%, 90%)`}
             opacity="0.9"
           />

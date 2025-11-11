@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { CoalitionLogo } from "@/components/CoalitionLogo";
 
 export default function Navigation() {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,8 +33,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer">
-              <CoalitionLogo size={48} />
+            <div className="flex items-center gap-2 cursor-pointer">
+              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg">FA</span>
+              </div>
               <span className="font-display font-semibold text-xl">Free-Association</span>
             </div>
           </Link>
