@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Calendly badge widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- GitHub Pages SPA redirect support -->
     <script>
       (function() {
@@ -26,5 +28,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Calendly badge widget -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+      window.addEventListener('load', function() {
+        if (window.Calendly) {
+          Calendly.initBadgeWidget({
+            url: 'https://calendly.com/coalition-openassociation/30min',
+            text: 'Schedule time with us',
+            color: '#0069ff',
+            textColor: '#ffffff',
+            branding: false
+          });
+        }
+      });
+    </script>
   </body>
 </html>
