@@ -98,7 +98,7 @@ export default function ContactSection() {
                 <img 
                   src="/logo.png" 
                   alt="Free-Association Logo" 
-                  className="w-16 h-16 object-contain drop-shadow-md"
+                  className="w-24 h-24 md:w-28 md:h-28 object-contain drop-shadow-lg"
                 />
               </div>
               <h3 className="font-semibold text-xl">Join the Free Association Coalition</h3>
