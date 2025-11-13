@@ -35,7 +35,7 @@ export default function Navigation() {
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
               <img 
-                src="/src/media/logo.png" 
+                src="/logo.png" 
                 alt="Free-Association Logo" 
                 className="w-8 h-8 object-contain"
               />

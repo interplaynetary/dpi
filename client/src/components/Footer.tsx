@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="/src/media/logo.png" 
+                src="/logo.png" 
                 alt="Free-Association Logo" 
                 className="w-8 h-8 object-contain"
               />

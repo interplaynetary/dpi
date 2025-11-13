@@ -21,7 +21,7 @@ export default function Join() {
               {/* Large Logo */}
               <div className="flex justify-center mb-8">
                 <img 
-                  src="/src/media/logo.png" 
+                  src="/logo.png" 
                   alt="Free-Association Logo" 
                   className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-lg"
                 />

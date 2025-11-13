@@ -96,7 +96,7 @@ export default function ContactSection() {
             <div className="text-center space-y-4">
               <div className="flex justify-center">
                 <img 
-                  src="/src/media/logo.png" 
+                  src="/logo.png" 
                   alt="Free-Association Logo" 
                   className="w-16 h-16 object-contain drop-shadow-md"
                 />
