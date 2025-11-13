@@ -7,9 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">FA</span>
-              </div>
+              <img 
+                src="/src/media/logo.png" 
+                alt="Free-Association Logo" 
+                className="w-8 h-8 object-contain"
+              />
               <span className="font-display font-semibold text-xl">Free-Association</span>
             </div>
             <p className="text-sm text-muted-foreground">

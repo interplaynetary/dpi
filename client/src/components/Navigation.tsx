@@ -34,9 +34,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">FA</span>
-              </div>
+              <img 
+                src="/src/media/logo.png" 
+                alt="Free-Association Logo" 
+                className="w-8 h-8 object-contain"
+              />
               <span className="font-display font-semibold text-xl">Free-Association</span>
             </div>
           </Link>

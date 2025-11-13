@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, DollarSign, Mail, Copy, Check, MessageCircle } from "lucide-react";
+import { ExternalLink, Github, DollarSign, Mail, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { FloatingSDG } from "@/components/FloatingSDG";
 import { Link } from "wouter";
@@ -94,7 +94,13 @@ export default function ContactSection() {
         <div className="max-w-3xl mx-auto">
           <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-3/10 border-primary/30">
             <div className="text-center space-y-4">
-              <MessageCircle className="w-10 h-10 text-primary mx-auto" />
+              <div className="flex justify-center">
+                <img 
+                  src="/src/media/logo.png" 
+                  alt="Free-Association Logo" 
+                  className="w-16 h-16 object-contain drop-shadow-md"
+                />
+              </div>
               <h3 className="font-semibold text-xl">Join the Free Association Coalition</h3>
               <p className="text-sm text-muted-foreground">
                 Connect with forward-thinking organizations, participate in Global Living Labs, and help build planetary coordination infrastructure

@@ -17,7 +17,16 @@ export default function Join() {
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
+            <div className="text-center space-y-6 mb-12">
+              {/* Large Logo */}
+              <div className="flex justify-center mb-8">
+                <img 
+                  src="/src/media/logo.png" 
+                  alt="Free-Association Logo" 
+                  className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-lg"
+                />
+              </div>
+              
               <h1 className="font-display font-bold text-4xl md:text-6xl bg-gradient-to-r from-primary via-chart-1 to-chart-3 bg-clip-text text-transparent">
                 Free Association Coalition
               </h1>
