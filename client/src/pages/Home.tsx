@@ -7,6 +7,7 @@ import ExampleSection from "@/components/ExampleSection";
 import AudienceSection from "@/components/AudienceSection";
 import TechnicalSection from "@/components/TechnicalSection";
 import InvestmentSection from "@/components/InvestmentSection";
+import COP30DemosSection from "@/components/COP30DemosSection";
 import DemoSection from "@/components/DemoSection";
 import VisionSection from "@/components/VisionSection";
 import ContactSection from "@/components/ContactSection";
@@ -31,6 +32,7 @@ export default function Home() {
         <DemoSection />
         <VisionSection />
         <InvestmentSection />
+        <COP30DemosSection />
         <ContactSection />
         <Footer />
       </div>
