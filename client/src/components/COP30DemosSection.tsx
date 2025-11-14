@@ -11,7 +11,7 @@ export default function COP30DemosSection() {
             COP30 Organization Demos
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Explore interactive demonstrations from organizations coordinating for COP30 using collective recognition
+            All data is for demonstration purposes only.
           </p>
         </div>
 
