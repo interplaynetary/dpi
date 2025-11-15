@@ -81,7 +81,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://opencollective.com/playnet" 
+                  href="https://opencollective.com/free-association" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors flex items-center gap-1"

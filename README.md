@@ -238,7 +238,7 @@ MIT
 ## 🔗 Links
 
 - [Local Development](http://localhost:5000)
-- [Open Collective](https://opencollective.com/playnet)
+- [Open Collective](https://opencollective.com/free-association)
 
 ---
 

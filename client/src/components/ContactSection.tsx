@@ -39,7 +39,7 @@ export default function ContactSection() {
             <h3 className="font-semibold text-lg mb-3">Funding</h3>
             <p className="text-sm text-muted-foreground mb-6">Tax-deductible via Playnet Open Collective</p>
             <Button className="w-full gap-2" asChild>
-              <a href="https://opencollective.com/playnet" target="_blank" rel="noopener noreferrer">
+              <a href="https://opencollective.com/free-association" target="_blank" rel="noopener noreferrer">
                 Contribute <ExternalLink className="w-4 h-4" />
               </a>
             </Button>

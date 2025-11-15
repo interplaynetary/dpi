@@ -299,7 +299,7 @@ export default function PledgeFormSection() {
                       asChild
                     >
                       <a
-                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}`}
+                        href={`https://opencollective.com/free-association/donate?amount=${tier.amount}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -326,7 +326,7 @@ export default function PledgeFormSection() {
                       asChild
                     >
                       <a
-                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}`}
+                        href={`https://opencollective.com/free-association/donate?amount=${tier.amount}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -353,7 +353,7 @@ export default function PledgeFormSection() {
                       asChild
                     >
                       <a
-                        href={`https://opencollective.com/playnet/donate?amount=${tier.amount}`}
+                        href={`https://opencollective.com/free-association/donate?amount=${tier.amount}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -373,7 +373,7 @@ export default function PledgeFormSection() {
                     asChild
                   >
                     <a 
-                      href="https://opencollective.com/playnet/donate" 
+                      href="https://opencollective.com/free-association/donate" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
@@ -386,7 +386,7 @@ export default function PledgeFormSection() {
                     asChild
                   >
                     <a 
-                      href="https://opencollective.com/playnet/donate" 
+                      href="https://opencollective.com/free-association/donate" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
