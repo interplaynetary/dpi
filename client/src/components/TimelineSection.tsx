@@ -154,7 +154,7 @@ export default function TimelineSection() {
 
               <div className="text-center pt-4">
                 <a 
-                  href="https://playnet.gitbook.io/docs/collective-recognition"
+                  href="https://docs.openassociation.org/collective-recognition"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"

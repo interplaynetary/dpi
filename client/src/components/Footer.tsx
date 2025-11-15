@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a 
-                  href="https://playnet.gitbook.io" 
+                  href="https://docs.openassociation.org" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors flex items-center gap-1"
