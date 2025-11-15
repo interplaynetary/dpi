@@ -154,7 +154,7 @@ export default function TimelineSection() {
 
               <div className="text-center pt-4">
                 <a 
-                  href="https://docs.openassociation.org/collective-recognition"
+                  href="https://docs.openassociation.org/implementation/collective-coordination"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
