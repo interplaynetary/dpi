@@ -1735,7 +1735,7 @@ export default function PledgeFormSection() {
               </div>
 
               {/* Consent Checkboxes */}
-              <div className="space-y-6 pt-4 border-t">
+              <div className="space-y-6 pt-4 border-t hidden">
                 <FormField
                   control={form.control}
                   name="consentTransactional"
