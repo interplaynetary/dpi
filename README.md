@@ -188,70 +188,9 @@ The project includes an animated network visualization background created with C
 - **Phase-based Timeline** with emoji indicators
 - **Real-time Updates** on progress
 
-## 🌐 GitHub Pages Deployment
+## 🌐 Deployment
 
-This project is configured for automatic deployment to GitHub Pages. Every push to the `main` branch will trigger a deployment.
-
-### Initial Setup
-
-1. **Enable GitHub Pages in your repository:**
-   - Go to Settings → Pages
-   - Under "Build and deployment", select "GitHub Actions" as the source
-   - The workflow will automatically deploy on the next push
-
-2. **Configure Base Path (if needed):**
-   
-   By default, the site is configured for `username.github.io/FreeAssociationLink/`
-   
-   To change this:
-   - **For a custom domain or user site (`username.github.io`):**
-     - Update `vite.config.ts` and change the `BASE_PATH` default to `'/'`
-   - **For a different repository name:**
-     - Update the `BASE_PATH` in `vite.config.ts` to match your repo name
-     - Example: `process.env.BASE_PATH || '/your-repo-name/'`
-
-3. **First Deployment:**
-   ```bash
-   git add .
-   git commit -m "Setup GitHub Pages deployment"
-   git push origin main
-   ```
-
-4. **View Your Site:**
-   - Once deployed, visit: `https://username.github.io/FreeAssociationLink/`
-   - Or your custom domain if configured
-
-### Local Preview
-
-Test the GitHub Pages build locally before deploying:
-
-```bash
-bun run preview:gh-pages
-```
-
-This builds with the GitHub Pages configuration and starts a local preview server.
-
-### How It Works
-
-- **Automatic Deployment:** GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys on every push to `main`
-- **Client-Side Routing:** The `404.html` file ensures all routes work correctly with Wouter's client-side routing
-- **Static Site Only:** The deployed site is purely static (HTML, CSS, JS) - no backend server required
-- **No Jekyll Processing:** The `.nojekyll` file prevents GitHub Pages from processing the site with Jekyll
-
-### Troubleshooting Deployment
-
-**Issue: 404 errors on routes**
-- Ensure `404.html` is in the build output
-- Check that the base path in `vite.config.ts` matches your repository setup
-
-**Issue: Assets not loading**
-- Verify the `base` path in `vite.config.ts` matches your GitHub Pages URL structure
-- Check browser console for 404 errors on assets
-
-**Issue: Workflow fails**
-- Check the Actions tab in GitHub for error logs
-- Ensure GitHub Pages is enabled in repository settings
-- Verify all dependencies install correctly
+This project is configured for automatic deployment to GitHub Pages. See [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md) for detailed deployment instructions.
 
 ## 🐛 Troubleshooting
 
@@ -279,8 +218,9 @@ bun run check
 
 ## 📚 Documentation
 
-- [Bun Setup Guide](./BUN_SETUP.md) - Detailed Bun configuration
 - [Design Guidelines](./design_guidelines.md) - UI/UX guidelines
+- [GitHub Pages Setup](./GITHUB_PAGES_SETUP.md) - Deployment guide
+- [Coalition Pledge](./COALITION_PLEDGE.md) - Join the coalition
 
 ## 🤝 Contributing
 
@@ -298,7 +238,6 @@ MIT
 ## 🔗 Links
 
 - [Local Development](http://localhost:5000)
-- [GitHub Pages Site](https://username.github.io/FreeAssociationLink/) (replace with your GitHub username)
 - [Open Collective](https://opencollective.com/playnet)
 
 ---
