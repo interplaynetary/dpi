@@ -19,19 +19,19 @@ export default function DemoSection() {
               <div className="w-3 h-3 rounded-full bg-chart-2" />
             </div>
             <a 
-              href="https://free.openassociation.org/" 
+              href="https://free.playnet.lol/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-demo-external"
             >
-              <span>free.openassociation.org</span>
+              <span>free.playnet.lol</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
           <div className="bg-background" style={{ minHeight: '600px', height: '70vh' }}>
             <iframe
-              src="https://free.openassociation.org/"
+              src="https://free.playnet.lol/"
               className="w-full h-full"
               title="Free-Association Demo"
               data-testid="iframe-demo"

@@ -235,7 +235,7 @@ See also:
 ## 🔗 Links
 
 - **Website**: [openassociation.org](https://openassociation.org)
-- **Free Association**: [GitHub](https://github.com/interplaynetary/free-association) | [Demo](https://free.openassociation.org)
+- **Free Association**: [GitHub](https://github.com/interplaynetary/free-association) | [Demo](https://free.playnet.lol)
 - **Documentation**: [docs.openassociation.org](https://docs.openassociation.org)
 - **News**: [news.openassociation.org](https://news.openassociation.org)
 - **Funding**: [Open Collective](https://opencollective.com/free-association)

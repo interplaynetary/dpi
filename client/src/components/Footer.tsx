@@ -57,7 +57,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://free.openassociation.org/" 
+                  href="https://free.playnet.lol/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors flex items-center gap-1"
