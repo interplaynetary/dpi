@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
@@ -35,6 +35,17 @@ export default function Footer() {
               </li>
               <li>
                 <a 
+                  href="https://news.openassociation.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors flex items-center gap-1"
+                  data-testid="link-footer-news"
+                >
+                  News <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a 
                   href="https://github.com/interplaynetary/free-association" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -46,13 +57,63 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://free.playnet.lol/" 
+                  href="https://free.openassociation.org/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors flex items-center gap-1"
                   data-testid="link-footer-demo"
                 >
                   Live Demo <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="font-semibold mb-4">Community</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a 
+                  href="https://github.com/interplaynetary/dpi/blob/main/CONTRIBUTING.md" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-footer-contributing"
+                >
+                  Contributing
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/interplaynetary/dpi/blob/main/CODE_OF_CONDUCT.md" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-footer-conduct"
+                >
+                  Code of Conduct
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/interplaynetary/dpi/blob/main/GOVERNANCE.md" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-footer-governance"
+                >
+                  Governance
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/interplaynetary/dpi/blob/main/LICENSE.md" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors"
+                  data-testid="link-footer-license"
+                >
+                  License (MIT)
                 </a>
               </li>
             </ul>
@@ -99,14 +160,14 @@ export default function Footer() {
             {/* Badges */}
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a 
-                href="https://opensource.org/licenses/AGPL-3.0"
+                href="https://opensource.org/licenses/MIT"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Open Source - AGPL-3.0"
+                title="Open Source - MIT License"
               >
                 <img 
-                  src="https://img.shields.io/badge/Open%20Source-AGPL--3.0-blue?style=flat-square&logo=opensourceinitiative" 
-                  alt="Open Source - AGPL-3.0"
+                  src="https://img.shields.io/badge/Open%20Source-MIT-blue?style=flat-square&logo=opensourceinitiative" 
+                  alt="Open Source - MIT License"
                   className="h-5"
                 />
               </a>
@@ -138,9 +199,18 @@ export default function Footer() {
               </a>
             </div>
             
-            <p className="text-sm text-muted-foreground">
-              © 2025 Open Association. Licensed under AGPL-3.0
-            </p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-muted-foreground">
+              <p>© 2025 Free Association Coalition</p>
+              <span className="hidden md:inline">•</span>
+              <a 
+                href="https://github.com/interplaynetary/dpi/blob/main/LICENSE.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                Licensed under MIT
+              </a>
+            </div>
           </div>
         </div>
       </div>

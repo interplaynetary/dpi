@@ -1,6 +1,8 @@
-# Free Association
+# Digital Public Infrastructure
 
-Technology for Better Global Coordination - A values-driven resource coordination platform with peer-to-peer architecture.
+**Digital Public Infrastructure for Global Coordination**
+
+A landing site for the Free Association Coalition - building values-driven coordination technology that serves sustainable development goals.
 
 ## 🚀 Quick Start
 
@@ -188,10 +190,6 @@ The project includes an animated network visualization background created with C
 - **Phase-based Timeline** with emoji indicators
 - **Real-time Updates** on progress
 
-## 🌐 Deployment
-
-This project is configured for automatic deployment to GitHub Pages. See [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md) for detailed deployment instructions.
-
 ## 🐛 Troubleshooting
 
 ### Port in Use
@@ -216,12 +214,6 @@ bun install
 bun run check
 ```
 
-## 📚 Documentation
-
-- [Design Guidelines](./design_guidelines.md) - UI/UX guidelines
-- [GitHub Pages Setup](./GITHUB_PAGES_SETUP.md) - Deployment guide
-- [Coalition Pledge](./COALITION_PLEDGE.md) - Join the coalition
-
 ## 🤝 Contributing
 
 1. Install dependencies: `bun install`
@@ -233,12 +225,39 @@ bun run check
 
 ## 📝 License
 
-MIT
+This project is licensed under the [MIT License](LICENSE.md).
+
+See also:
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Governance](GOVERNANCE.md)
 
 ## 🔗 Links
 
-- [Local Development](http://localhost:5000)
-- [Open Collective](https://opencollective.com/free-association)
+- **Website**: [openassociation.org](https://openassociation.org)
+- **Free Association**: [GitHub](https://github.com/interplaynetary/free-association) | [Demo](https://free.openassociation.org)
+- **Documentation**: [docs.openassociation.org](https://docs.openassociation.org)
+- **News**: [news.openassociation.org](https://news.openassociation.org)
+- **Funding**: [Open Collective](https://opencollective.com/free-association)
+- **Contact**: coalition@openassociation.org
+
+## 🌍 SDG Alignment
+
+This project supports the following UN Sustainable Development Goals:
+
+- **SDG 1**: No Poverty - Fair resource distribution
+- **SDG 3**: Good Health and Well-Being - Healthcare coordination
+- **SDG 4**: Quality Education - Educational resource sharing
+- **SDG 10**: Reduced Inequalities - Equitable access systems
+- **SDG 13**: Climate Action - Climate coordination infrastructure
+- **SDG 16**: Peace, Justice and Strong Institutions - Transparent governance
+- **SDG 17**: Partnerships for the Goals - Multi-stakeholder collaboration
+
+## 🔒 License & Governance
+
+- **Open Source**: MIT License
+- **Governance**: Community-driven with transparent processes
+- **Code of Conduct**: Professional and inclusive community standards
 
 ---
 

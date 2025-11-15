@@ -7,7 +7,7 @@ import solarPunkNowLogo from "@/media/solar-punk-now.png";
 import beTogetherLogo from "@/media/be-together.png";
 
 const coalitionMembers = [
-  { name: "Playnet", logo: playnetLogo, url: "https://playnet.lol" },
+  { name: "Playnet", logo: playnetLogo, url: "https://openassociation.org" },
   { name: "Allternet", logo: allernetLogo, url: "https://allternet.org" },
   { name: "Dreamtank", logo: dreamtankLogo, url: "https://wearedreamtank.org/" },
   { name: "Modular Commons", logo: modularCommonsLogo, url: "https://modularcommons.com" },

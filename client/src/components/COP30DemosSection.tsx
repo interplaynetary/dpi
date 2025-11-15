@@ -30,7 +30,7 @@ export default function COP30DemosSection() {
               asChild
             >
               <a 
-                href="https://free.playnet.lol/org" 
+                href="https://free.openassociation.org/org" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="gap-2"
@@ -42,7 +42,7 @@ export default function COP30DemosSection() {
           
           <div className="relative w-full" style={{ paddingBottom: '75%' }}>
             <iframe
-              src="https://free.playnet.lol/org"
+              src="https://free.openassociation.org/org"
               className="absolute top-0 left-0 w-full h-full border-0"
               title="COP30 Organization Demos"
               allow="fullscreen"
