@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, BookOpen } from "lucide-react";
 
 export default function DemoSection() {
   return (
@@ -8,7 +9,26 @@ export default function DemoSection() {
         <div className="text-center space-y-3 mb-10">
           <h2 className="font-display font-bold text-4xl md:text-5xl">Try it out!</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Drag a square up/down to increase/decrease its priority! To see more advanced features like mutual-recognition and capacity allocation create a free account!</p>
+            Drag a square up/down to increase/decrease its priority! To see more advanced features like mutual-recognition and capacity allocation create a free account!
+          </p>
+          <div className="pt-2">
+            <Button 
+              asChild
+              variant="outline"
+              size="sm"
+              className="gap-2"
+            >
+              <a 
+                href="https://docs.openassociation.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-testid="button-demo-docs"
+              >
+                <BookOpen className="w-3 h-3" />
+                Developer Documentation
+              </a>
+            </Button>
+          </div>
         </div>
         
         <Card className="overflow-hidden">

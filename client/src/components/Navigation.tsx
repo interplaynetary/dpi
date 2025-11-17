@@ -51,6 +51,15 @@ export default function Navigation() {
             >
               How It Works
             </button>
+            <a 
+              href="https://docs.openassociation.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="link-docs"
+            >
+              Docs
+            </a>
             <button 
               onClick={() => scrollToSection('investment')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"

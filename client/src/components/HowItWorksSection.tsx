@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Percent, DollarSign, TrendingUp, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Percent, DollarSign, TrendingUp, ArrowRight, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { FloatingSDG } from "@/components/FloatingSDG";
 
@@ -281,6 +282,24 @@ export default function HowItWorksSection() {
                     <div className="text-4xl font-bold text-chart-2 mb-1">&lt;1s</div>
                     <div className="text-sm text-muted-foreground font-medium">Convergence Time</div>
                   </div>
+                </div>
+                <div className="pt-4">
+                  <Button 
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="gap-2"
+                  >
+                    <a 
+                      href="https://docs.openassociation.org" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      data-testid="button-how-it-works-docs"
+                    >
+                      Learn More in the Docs
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Shield, CheckCircle2, Lock, TrendingUp, Zap, Globe, ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Shield, CheckCircle2, Lock, TrendingUp, Zap, Globe, ChevronDown, ChevronUp, BookOpen } from "lucide-react";
 import { useState } from "react";
 
 const guarantees = [
@@ -190,10 +191,27 @@ export default function TechnicalSection() {
         </div>
 
         <Card className="p-6 bg-gradient-to-br from-primary/10 to-chart-2/10 border-primary/30">
-          <div className="text-center space-y-3">
+          <div className="text-center space-y-4">
             <p className="text-lg leading-relaxed max-w-3xl mx-auto">
               Like GPS, internet protocols, and other foundational technologies - Free Association is designed as <span className="font-semibold text-primary">neutral, open infrastructure</span> that serves humanity's coordination needs without favoring any particular entity or ideology.
             </p>
+            <div className="pt-2">
+              <Button 
+                asChild
+                size="lg"
+                className="gap-2"
+              >
+                <a 
+                  href="https://docs.openassociation.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  data-testid="button-technical-docs"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  Read Full Documentation
+                </a>
+              </Button>
+            </div>
           </div>
         </Card>
       </div>
