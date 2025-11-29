@@ -51,7 +51,7 @@ export default function CoalitionMembersSection() {
 
         <div className="mt-8 text-center max-w-2xl mx-auto">
           <p className="text-muted-foreground text-xs md:text-sm">
-            These pioneering organizations are building the foundation for a new coordination paradigm—proving that mutual recognition can transform how humanity allocates resources for shared goals.
+            These pioneering organizations are building the foundation for a new coordination paradigm - proving that mutual recognition can transform how humanity allocates resources for shared goals.
           </p>
         </div>
       </div>

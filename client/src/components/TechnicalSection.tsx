@@ -159,7 +159,7 @@ export default function TechnicalSection() {
                           key={i} 
                           className={item.line === "" ? "h-2" : ""}
                           style={{ 
-                            paddingLeft: item.indent ? `${item.indent * 1.5}rem` : '0' 
+                            paddingLeft: 'indent' in item && item.indent ? `${item.indent * 1.5}rem` : '0' 
                           }}
                         >
                           {item.line}

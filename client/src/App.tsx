@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Join from "@/pages/Join";
+import Abundance from "@/pages/Abundance";
 import NotFound from "@/pages/not-found";
 
 // Get the base path from import.meta.env (set by Vite)
@@ -16,6 +17,7 @@ function AppRouter() {
     <Switch>
       <Route path="/" component={Home}/>
       <Route path="/join" component={Join}/>
+      <Route path="/abundance" component={Abundance}/>
       <Route component={NotFound} />
     </Switch>
   );

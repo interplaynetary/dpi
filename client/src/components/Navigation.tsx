@@ -51,6 +51,11 @@ export default function Navigation() {
             >
               How It Works
             </button>
+            <Link href="/abundance">
+              <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                Abundance Economy
+              </span>
+            </Link>
             <a 
               href="https://docs.openassociation.org"
               target="_blank"

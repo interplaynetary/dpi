@@ -48,7 +48,7 @@ export default function Join() {
             <Card className="p-8">
               <h2 className="font-display font-bold text-3xl mb-4">The Problem</h2>
               <p className="text-muted-foreground leading-relaxed">
-                From climate adaptation to pandemic response, our coordination mechanisms are failing. Pledges stall in bureaucracy, emergency resources are paralyzed by political negotiation, and aid flows are inequitable. The challenge isn't lack of resources or goodwill — it's inadequate coordination infrastructure. We're solving 21st-century polycrises with 20th-century tools.
+                From climate adaptation to pandemic response, our coordination mechanisms are failing. Pledges stall in bureaucracy, emergency resources are paralyzed by political negotiation, and aid flows are inequitable. The challenge isn't lack of resources or goodwill  -  it's inadequate coordination infrastructure. We're solving 21st-century polycrises with 20th-century tools.
               </p>
             </Card>
 
@@ -94,7 +94,7 @@ export default function Join() {
               </div>
               
               <p className="text-muted-foreground mt-6">
-                This peer-to-peer Digital Public Infrastructure (DPI) allows any entity — from nation-states and UN agencies to philanthropic foundations, impact funds, and grassroots organizations — to coordinate resources through transparent, automatic allocation based on mutual recognition.
+                This peer-to-peer Digital Public Infrastructure (DPI) allows any entity  -  from nation-states and UN agencies to philanthropic foundations, impact funds, and grassroots organizations  -  to coordinate resources through transparent, automatic allocation based on mutual recognition.
               </p>
             </Card>
 

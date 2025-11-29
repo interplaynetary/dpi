@@ -19,12 +19,6 @@ const momentum = [
     metric: "Global",
     label: "Scale Ready",
     description: "Architecture designed for planetary coordination"
-  },
-  {
-    icon: TrendingUp,
-    metric: "Live",
-    label: "Working Demo",
-    description: "Fully functional prototype demonstrating real-time allocation"
   }
 ];
 
