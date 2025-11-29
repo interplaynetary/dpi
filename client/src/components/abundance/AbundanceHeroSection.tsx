@@ -70,11 +70,6 @@ export default function AbundanceHeroSection() {
           ))}
         </div>
       </div>
-
-      {/* Formula hint */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-10">
-        <div className="text-2xl text-primary font-mono">MR(A,B) = min(A→B, B→A)</div>
-      </div>
     </section>
   );
 }
