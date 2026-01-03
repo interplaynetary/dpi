@@ -30,7 +30,7 @@ const audiences = [
   {
     icon: Landmark,
     title: "Impact Funds",
-    description: "Direct capital to projects that create mutual value across your investment portfolio"
+    description: "Direct capital to projects that amplify value across your investment portfolio"
   }
 ];
 
@@ -44,7 +44,7 @@ export default function AudienceSection() {
             Any entity-to-entity relationship - from neighbors sharing tools to nations coordinating aid. If you value each other's contributions, this infrastructure serves you.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {audiences.map((audience, index) => (
             <Card key={index} className="p-5 hover-elevate transition-all" data-testid={`card-audience-${index}`}>

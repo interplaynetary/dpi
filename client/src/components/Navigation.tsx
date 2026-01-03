@@ -34,29 +34,24 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img 
-                src="/logo.png" 
-                alt="Free-Association Logo" 
+              <img
+                src="/logo.png"
+                alt="Free-Association Logo"
                 className="w-8 h-8 object-contain"
               />
               <span className="font-display font-semibold text-xl">Free-Association</span>
             </div>
           </Link>
-          
+
           <div className="hidden md:flex items-center gap-8">
-            <button 
+            <button
               onClick={() => scrollToSection('how-it-works')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-how-it-works"
             >
               How It Works
             </button>
-            <Link href="/abundance">
-              <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-                Abundance Economy
-              </span>
-            </Link>
-            <a 
+            <a
               href="https://docs.openassociation.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -65,14 +60,14 @@ export default function Navigation() {
             >
               Docs
             </a>
-            <button 
+            <button
               onClick={() => scrollToSection('investment')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-investment"
             >
               Investment
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('demo')}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-demo"
@@ -90,7 +85,7 @@ export default function Navigation() {
             >
               {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
-            <Button 
+            <Button
               onClick={() => scrollToSection('contact')}
               data-testid="button-get-started"
             >

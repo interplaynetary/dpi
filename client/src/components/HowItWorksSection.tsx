@@ -1,8 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Percent, DollarSign, TrendingUp, ArrowRight, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FloatingSDG } from "@/components/FloatingSDG";
+
+declare global {
+  interface Window {
+    MathJax: {
+      typesetPromise: () => Promise<void>;
+    };
+  }
+}
 
 const steps = [
   {
@@ -28,7 +36,7 @@ const steps = [
         "Non-transferable: Cannot be bought, sold, or inherited",
         "Dynamically adjustable: Changes as relationships evolve",
         "Global: Same recognition applies across all resource types",
-        "Mutual: min(your recognition of them, their recognition of you)"
+        "Mutual: $$ \\text{Mutual}_{ij} = \\min(R_{ij}, R_{ji}) $$"
       ]
     }
   },
@@ -68,15 +76,16 @@ const steps = [
       explanation: "Your needs are satisfied through coordinated allocation from all providers who recognize you:",
       convergence: [
         { phase: "Round 1", description: "Multiple providers allocate based on mutual recognition shares" },
-        { phase: "Round 2", description: "Remaining needs update automatically: Need(new) = Need(old) - Received" },
+        { phase: "Round 2", description: "Remaining needs update automatically: $$ N_{rem} = \\max(0, N_{total} - \\sum Received) $$" },
         { phase: "Round 3+", description: "Process repeats until all needs converge to zero" }
       ],
       formula: [
         { line: "Your allocation from each provider:" },
-        { line: "= (Your-MR-Share) × (Your-Need / Sum-All-Needs) × Provider-Capacity", indent: 1 },
+        { line: "$$ A \\propto \\frac{R}{\\sum R} $$", indent: 0 },
+        { line: "$$ A = C \\cdot \\frac{R}{\\sum R} $$", indent: 0 },
         { line: "" },
         { line: "Total received = Sum of allocations from all providers" },
-        { line: "Remaining-Need = max(0, Declared-Need - Total-Received)" }
+        { line: "$$ A_{total} = \\sum A_{provider} $$", indent: 0 }
       ],
       properties: [
         "Multi-provider: Receive from everyone who recognizes you simultaneously",
@@ -96,18 +105,28 @@ export default function HowItWorksSection() {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
+  useEffect(() => {
+    if (expandedIndex !== null && window.MathJax) {
+      // Small delay to ensure DOM is ready after accordion expansion
+      const timer = setTimeout(() => {
+        window.MathJax.typesetPromise?.();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [expandedIndex]);
+
   return (
     <section id="how-it-works" className="py-16 md:py-24 relative overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-2/5 -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.05),rgba(255,255,255,0))] -z-10" />
-      
+
       {/* SDG Icons Background */}
       <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
         <FloatingSDG sdgNumber={5} size="sm" />
         <FloatingSDG sdgNumber={8} size="md" />
         <FloatingSDG sdgNumber={12} size="sm" />
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-4 mb-12">
           <div className="inline-block">
@@ -120,32 +139,29 @@ export default function HowItWorksSection() {
             Three simple data points published by each participant - the algorithm handles the rest
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative group">
-              <Card 
-                className={`p-6 h-full transition-all duration-300 cursor-pointer border-2 ${
-                  expandedIndex === index 
-                    ? 'border-primary shadow-2xl shadow-primary/20 bg-gradient-to-br from-primary/5 to-transparent' 
-                    : 'border-border hover:border-primary/50 hover:shadow-lg'
-                }`}
+              <Card
+                className={`p-6 h-full transition-all duration-300 cursor-pointer border-2 ${expandedIndex === index
+                  ? 'border-primary shadow-2xl shadow-primary/20 bg-gradient-to-br from-primary/5 to-transparent'
+                  : 'border-border hover:border-primary/50 hover:shadow-lg'
+                  }`}
                 data-testid={`card-step-${index}`}
                 onClick={() => toggleExpand(index)}
               >
                 <div className="space-y-4">
                   <div className="flex items-start justify-between">
-                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                      expandedIndex === index 
-                        ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30' 
-                        : 'bg-primary/10 text-primary group-hover:scale-110'
-                    }`}>
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${expandedIndex === index
+                      ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30'
+                      : 'bg-primary/10 text-primary group-hover:scale-110'
+                      }`}>
                       <step.icon className="w-7 h-7" />
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className={`text-5xl font-bold transition-colors duration-300 ${
-                        expandedIndex === index ? 'text-primary/30' : 'text-muted-foreground/20'
-                      }`}>{step.number}</span>
+                      <span className={`text-5xl font-bold transition-colors duration-300 ${expandedIndex === index ? 'text-primary/30' : 'text-muted-foreground/20'
+                        }`}>{step.number}</span>
                       {expandedIndex === index ? (
                         <ChevronUp className="w-5 h-5 text-primary flex-shrink-0 animate-bounce" />
                       ) : (
@@ -160,14 +176,14 @@ export default function HowItWorksSection() {
                     <div className="pt-2 mt-2 border-t border-border">
                       <p className="text-xs text-muted-foreground italic">{step.example}</p>
                     </div>
-                    
+
                     {expandedIndex === index && (
                       <div className="pt-4 mt-4 border-t space-y-4">
                         <div>
                           <h4 className="font-semibold text-sm text-primary mb-2">{step.expandedContent.concept}</h4>
                           <p className="text-sm text-muted-foreground italic mb-3">{step.expandedContent.explanation}</p>
                         </div>
-                        
+
                         {step.expandedContent.tree && (
                           <div className="bg-muted/50 rounded-lg p-4 font-mono text-xs space-y-1">
                             {step.expandedContent.tree.map((item, i) => (
@@ -175,7 +191,7 @@ export default function HowItWorksSection() {
                             ))}
                           </div>
                         )}
-                        
+
                         {step.expandedContent.properties && (
                           <ul className="space-y-2">
                             {step.expandedContent.properties.map((prop, i) => (
@@ -186,7 +202,7 @@ export default function HowItWorksSection() {
                             ))}
                           </ul>
                         )}
-                        
+
                         {step.expandedContent.slots && (
                           <div className="space-y-2">
                             {step.expandedContent.slots.map((slot, i) => (
@@ -197,7 +213,7 @@ export default function HowItWorksSection() {
                             ))}
                           </div>
                         )}
-                        
+
                         {step.expandedContent.matching && (
                           <div>
                             <p className="text-sm font-medium mb-2">{step.expandedContent.matching}</p>
@@ -208,11 +224,11 @@ export default function HowItWorksSection() {
                             </div>
                           </div>
                         )}
-                        
+
                         {step.expandedContent.specialization && (
                           <p className="text-sm italic text-muted-foreground">{step.expandedContent.specialization}</p>
                         )}
-                        
+
                         {step.expandedContent.convergence && (
                           <div className="space-y-2">
                             {step.expandedContent.convergence.map((conv, i) => (
@@ -223,15 +239,15 @@ export default function HowItWorksSection() {
                             ))}
                           </div>
                         )}
-                        
+
                         {step.expandedContent.formula && (
                           <div className="bg-muted/50 rounded-lg p-4 font-mono text-xs space-y-1">
                             {step.expandedContent.formula.map((item, i) => (
-                              <div 
-                                key={i} 
+                              <div
+                                key={i}
                                 className={item.line === "" ? "h-2" : ""}
-                                style={{ 
-                                  paddingLeft: item.indent ? `${item.indent * 1.5}rem` : '0' 
+                                style={{
+                                  paddingLeft: item.indent ? `${item.indent * 1.5}rem` : '0'
                                 }}
                               >
                                 {item.line}
@@ -239,7 +255,7 @@ export default function HowItWorksSection() {
                             ))}
                           </div>
                         )}
-                        
+
                         {step.expandedContent.multiDimensional && (
                           <p className="text-sm italic text-muted-foreground">{step.expandedContent.multiDimensional}</p>
                         )}
@@ -259,7 +275,7 @@ export default function HowItWorksSection() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12">
           <Card className="p-8 bg-gradient-to-br from-primary/10 via-chart-3/5 to-chart-2/10 border-primary/30 max-w-4xl mx-auto shadow-xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-primary/5 to-transparent animate-pulse" />
@@ -284,15 +300,15 @@ export default function HowItWorksSection() {
                   </div>
                 </div>
                 <div className="pt-4">
-                  <Button 
+                  <Button
                     asChild
                     variant="outline"
                     size="sm"
                     className="gap-2"
                   >
-                    <a 
-                      href="https://docs.openassociation.org" 
-                      target="_blank" 
+                    <a
+                      href="https://docs.openassociation.org"
+                      target="_blank"
                       rel="noopener noreferrer"
                       data-testid="button-how-it-works-docs"
                     >

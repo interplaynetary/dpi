@@ -1,9 +1,35 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle2, Lock, TrendingUp, Zap, Globe, ChevronDown, ChevronUp, BookOpen } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+declare global {
+  interface Window {
+    MathJax: {
+      typesetPromise: () => Promise<void>;
+    };
+  }
+}
 
 const guarantees = [
+  {
+    icon: Scale,
+    title: "Proportional Allocation",
+    description: "Voluntary Association: Capacity follows Recognition of contribution toward Goals",
+    color: "text-primary",
+    bgColor: "bg-primary/10",
+    details: {
+      explanation: "We define this as the axiom of Voluntary Association:",
+      logic: [
+        { line: "Entities allocate their Capacity (C)" },
+        { line: "in proportion to their Recognition (R)" },
+        { line: "of contribution toward their Goals (G)." },
+        { line: "" },
+        { line: "$$ A_i \\propto \\frac{R_i}{\\sum R} $$", indent: 1 }
+      ],
+      conclusion: "No central authority decides who gets what. Allocation is the mathematical result of sovereign recognition."
+    }
+  },
   {
     icon: CheckCircle2,
     title: "Strategy-Proof",
@@ -25,42 +51,22 @@ const guarantees = [
     }
   },
   {
-    icon: Scale,
-    title: "Guaranteed Fairness",
-    description: "Allocations are strictly proportional to mutual recognition and need - no arbitrary favoritism",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
-    details: {
-      explanation: "The allocation formula ensures deterministic, fair distribution:",
-      logic: [
-        { line: "Your-Share = (Your-Mutual-Recognition / Sum-of-All-Mutual-Recognitions)" },
-        { line: "             × (Your-Active-Need / Sum-of-All-Active-Needs)" },
-        { line: "             × Provider's-Capacity" },
-        { line: "" },
-        { line: "Your-Allocation = minimum(Your-Share, Your-Declared-Need)" }
-      ],
-      conclusion: "Everyone running the same deterministic formula on the same inputs computes identical allocations. No central authority can favor or discriminate - the mathematics guarantees fairness."
-    }
-  },
-  {
     icon: Zap,
-    title: "Fast Convergence",
-    description: "Mathematically proven to reach stable, optimal state in just 5-10 calculation rounds",
+    title: "Alignment Velocity",
+    description: "Rapid feedback loop between Recognition and Outcomes",
     color: "text-chart-4",
     bgColor: "bg-chart-4/10",
     details: {
-      explanation: "Needs decrease exponentially fast:",
+      explanation: "The system optimizes itself through a high-frequency feedback loop:",
       logic: [
-        { line: "Total-Needs(t+1) ≤ k × Total-Needs(t), where k < 1" },
+        { line: "1. Recognition (R) defines Allocation (A)" },
+        { line: "2. Allocation (A) produces Outcomes (O)" },
+        { line: "3. Outcomes (O) educate new Recognition (R')" },
         { line: "" },
-        { line: "Example with k = 0.8 (20% satisfaction per round):" },
-        { line: "After 10 rounds: 0.8¹⁰ = 10.7% of original needs remain", indent: 1 },
-        { line: "After 20 rounds: 0.8²⁰ = 1.2% remain", indent: 1 },
-        { line: "" },
-        { line: "Each round: ~100 milliseconds" },
-        { line: "Total convergence: 0.5 to 2 seconds" }
+        { line: "Velocity = ΔAlignment / ΔTime" },
+        { line: "High Velocity → Rapid convergence to optimal structure" }
       ],
-      conclusion: "The system responds in real-time. From need declaration to resource allocation in seconds, not days or weeks."
+      conclusion: "Unlike rigid bureaucratic budgets, this 'liquid' structure adapts instantly. Bad allocations manifest as poor outcomes, with immediate correction of recognition fully supported by infrastructure."
     }
   },
   {
@@ -118,6 +124,16 @@ export default function TechnicalSection() {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
+  useEffect(() => {
+    if (expandedIndex !== null && window.MathJax) {
+      // Small delay to ensure DOM is ready after accordion expansion
+      const timer = setTimeout(() => {
+        window.MathJax.typesetPromise?.();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [expandedIndex]);
+
   return (
     <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -127,12 +143,12 @@ export default function TechnicalSection() {
             Built on mathematically proven principles that ensure integrity and fairness
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
           {guarantees.map((guarantee, index) => (
-            <Card 
-              key={index} 
-              className="p-6 hover-elevate transition-all cursor-pointer" 
+            <Card
+              key={index}
+              className="p-6 hover-elevate transition-all cursor-pointer"
               data-testid={`card-guarantee-${index}`}
               onClick={() => toggleExpand(index)}
             >
@@ -149,17 +165,17 @@ export default function TechnicalSection() {
                 </div>
                 <h3 className="font-semibold text-lg">{guarantee.title}</h3>
                 <p className="text-sm text-muted-foreground leading-snug">{guarantee.description}</p>
-                
+
                 {expandedIndex === index && (
                   <div className="pt-3 mt-3 border-t space-y-3">
                     <p className="text-sm text-muted-foreground italic">{guarantee.details.explanation}</p>
                     <div className="bg-muted/50 rounded-lg p-4 font-mono text-xs space-y-1">
                       {guarantee.details.logic.map((item, i) => (
-                        <div 
-                          key={i} 
+                        <div
+                          key={i}
                           className={item.line === "" ? "h-2" : ""}
-                          style={{ 
-                            paddingLeft: 'indent' in item && item.indent ? `${item.indent * 1.5}rem` : '0' 
+                          style={{
+                            paddingLeft: 'indent' in item && item.indent ? `${item.indent * 1.5}rem` : '0'
                           }}
                         >
                           {item.line}
@@ -173,7 +189,7 @@ export default function TechnicalSection() {
             </Card>
           ))}
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
           {features.map((feature, index) => (
             <Card key={index} className="p-6 border-primary/20" data-testid={`card-feature-${index}`}>
@@ -196,14 +212,14 @@ export default function TechnicalSection() {
               Like GPS, internet protocols, and other foundational technologies - Free Association is designed as <span className="font-semibold text-primary">neutral, open infrastructure</span> that serves humanity's coordination needs without favoring any particular entity or ideology.
             </p>
             <div className="pt-2">
-              <Button 
+              <Button
                 asChild
                 size="lg"
                 className="gap-2"
               >
-                <a 
-                  href="https://docs.openassociation.org" 
-                  target="_blank" 
+                <a
+                  href="https://docs.openassociation.org"
+                  target="_blank"
                   rel="noopener noreferrer"
                   data-testid="button-technical-docs"
                 >

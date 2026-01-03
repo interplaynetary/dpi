@@ -9,18 +9,18 @@ export default function DemoSection() {
         <div className="text-center space-y-3 mb-10">
           <h2 className="font-display font-bold text-4xl md:text-5xl">Try it out!</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Drag a square up/down to increase/decrease its priority! To see more advanced features like mutual-recognition and capacity allocation create a free account!
+            Drag a square up/down to increase/decrease its priority! To see more advanced features like capacity allocation create a free account!
           </p>
           <div className="pt-2">
-            <Button 
+            <Button
               asChild
               variant="outline"
               size="sm"
               className="gap-2"
             >
-              <a 
-                href="https://docs.openassociation.org" 
-                target="_blank" 
+              <a
+                href="https://docs.openassociation.org"
+                target="_blank"
                 rel="noopener noreferrer"
                 data-testid="button-demo-docs"
               >
@@ -30,7 +30,7 @@ export default function DemoSection() {
             </Button>
           </div>
         </div>
-        
+
         <Card className="overflow-hidden">
           <div className="bg-muted/50 p-4 border-b border-border flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -38,9 +38,9 @@ export default function DemoSection() {
               <div className="w-3 h-3 rounded-full bg-chart-4" />
               <div className="w-3 h-3 rounded-full bg-chart-2" />
             </div>
-            <a 
-              href="https://free.playnet.lol/" 
-              target="_blank" 
+            <a
+              href="https://free.playnet.lol/"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-demo-external"
