@@ -31,6 +31,36 @@ export default function DemoSection() {
           </div>
         </div>
 
+        {/* Map Demo */}
+        <Card className="overflow-hidden mt-8">
+          <div className="bg-muted/50 p-4 border-b border-border flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-destructive" />
+              <div className="w-3 h-3 rounded-full bg-chart-4" />
+              <div className="w-3 h-3 rounded-full bg-chart-2" />
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://free.playnet.lol/map"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-demo-map-external"
+              >
+                <span>free.playnet.lol/map</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+          <div className="bg-background" style={{ minHeight: '600px', height: '70vh' }}>
+            <iframe
+              src="https://free.playnet.lol/map"
+              className="w-full h-full"
+              data-testid="iframe-demo-map"
+            />
+          </div>
+        </Card>
+
         <Card className="overflow-hidden">
           <div className="bg-muted/50 p-4 border-b border-border flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -59,37 +89,7 @@ export default function DemoSection() {
           </div>
         </Card>
 
-        {/* Map Demo */}
-        <Card className="overflow-hidden mt-8">
-          <div className="bg-muted/50 p-4 border-b border-border flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-destructive" />
-              <div className="w-3 h-3 rounded-full bg-chart-4" />
-              <div className="w-3 h-3 rounded-full bg-chart-2" />
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-foreground/80 font-medium hidden sm:inline-block">Interactive Map Visualization</span>
-              <a
-                href="https://free.playnet.lol/map"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-demo-map-external"
-              >
-                <span>free.playnet.lol/map</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-          <div className="bg-background" style={{ minHeight: '600px', height: '70vh' }}>
-            <iframe
-              src="https://free.playnet.lol/map"
-              className="w-full h-full"
-              title="Interactive Map Visualization"
-              data-testid="iframe-demo-map"
-            />
-          </div>
-        </Card>
+
       </div>
     </section>
   );
