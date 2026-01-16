@@ -8,7 +8,7 @@ export default function COP30DemosSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 mb-10">
           <h2 className="font-display font-bold text-4xl md:text-5xl">
-            COP30 Organization Demos
+            Climate Organization Demos
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             All data is for demonstration purposes only.
@@ -24,14 +24,14 @@ export default function COP30DemosSection() {
                 Explore organizations and their coordination needs
               </p>
             </div>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="sm"
               asChild
             >
-              <a 
-                href="https://free.playnet.lol/org" 
-                target="_blank" 
+              <a
+                href="https://free.playnet.lol/org"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="gap-2"
               >
@@ -39,7 +39,7 @@ export default function COP30DemosSection() {
               </a>
             </Button>
           </div>
-          
+
           <div className="relative w-full" style={{ paddingBottom: '75%' }}>
             <iframe
               src="https://free.playnet.lol/org"

@@ -162,7 +162,7 @@ Your contributions to Free-Association help create:
 - **Glossary** - Definitions of key terms and concepts
 - **Documentation**: [docs.openassociation.org](https://docs.openassociation.org)
 - **News**: [news.openassociation.org](https://news.openassociation.org)
-- **Interface Demo** - [interplaynetary.github.io/free-association](https://interplaynetary.github.io/free-association/)
+- **Interface Demo** - [free.playnet.lol](https://free.playnet.lol/)
 - **Community Discussions** - Ongoing conversations about development and implementation
 
 ### 🎯 Recognition and Gratitude
